@@ -1,5 +1,7 @@
 <template>
-<router-view />
+<div class="header">
+    header
+</div>
 </template>
 
 <script setup lang="ts">
