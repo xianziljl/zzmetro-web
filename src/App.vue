@@ -1,8 +1,0 @@
-<template>
-<router-view />
-</template>
-
-<script setup lang="ts">
-// import { ref, computed, defineProps, defineEmits } from 'vue';
-</script>
-
