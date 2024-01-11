@@ -16,6 +16,11 @@ export default {
         'index': path.resolve(__dirname, 'index.html'),
         'home': path.resolve(__dirname, 'home/index.html'),
       },
+      output: {
+        chunkFileNames: "static/js/[name].js",
+        entryFileNames: "static/js/[name].js",
+        assetFileNames: "static/[ext]/[name].[ext]",
+      },
     }
   }
 };
