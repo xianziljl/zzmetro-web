@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body class="m0">
-    {{> header }}
-    <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">222</div>
+<html lang="zh">
 
-    <script type="module" inline-source>
-        import 'uno.css';
-        console.log(111);
-      </script>
+{{> doc-head }}
+
+<body class="m0">
+  {{> header }}
+  <div class="fr ac p-10 f1 bg-blue h:(bg-green text-yellow) font-li">222</div>
+
+  <script type="module" inline-source>
+    import 'uno.css';
+    console.log(111);
+  </script>
 </body>
+
 </html>

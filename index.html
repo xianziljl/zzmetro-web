@@ -1,22 +1,18 @@
 <!doctype html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./assets/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <style>.test{
-      flex-direction: column;
-    }</style>
-  </head>
-  <body class="m0">
-    {{> header }}
-    <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">你好 hello world</div>
 
-    <script type="module" inline-source>
-      import 'uno.css';
-      console.log(111);
-    </script>
-  </body>
+{{> doc-head }}
+
+<body class="m0">
+  {{> header }}
+  <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">你好 hello world</div>
+
+  <div class="i-mdi-alarm text-orange-400 fs20"></div>
+
+  <script type="module" inline-source>
+    import 'uno.css';
+    console.log(111);
+  </script>
+</body>
+
 </html>

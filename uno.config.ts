@@ -4,6 +4,7 @@ import transformerVariantGroup from '@unocss/transformer-variant-group';
 import presetAutoprefixer from 'unocss-preset-autoprefixer';
 import presetUno from 'unocss/preset-uno';
 import presetChinese from "unocss-preset-chinese";
+import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
   content: {
@@ -15,6 +16,7 @@ export default defineConfig({
   ],
   presets: [
     presetUno(),
+    presetIcons(),
     presetChinese({ chineseType: 'simplified' }),
     presetAutoprefixer(),
   ],

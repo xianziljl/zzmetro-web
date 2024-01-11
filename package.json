@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.167",
+    "@unocss/preset-icons": "^0.58.3",
     "@unocss/preset-legacy-compat": "^0.58.3",
     "@unocss/transformer-compile-class": "^0.58.3",
     "@unocss/transformer-variant-group": "^0.58.3",
