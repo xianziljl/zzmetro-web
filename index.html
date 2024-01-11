@@ -1,18 +1,119 @@
 <!doctype html>
-<html lang="zh">
+<html lang="zh-CN">
 
 {{> doc-head }}
 
-<body class="m0">
-  {{> header }}
-  <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">你好 hello world</div>
+<body class="m0 font-hei">
+  <header class="header pf w-full h-100px">
+    <div class="header-bg pa w-full h-full transition"></div>
+    <!-- <div class="accessible-tool pa w-full h-48px z-1"></div> -->
+    <div class="header-ctn pa w-full h-100px oh">
+      <div class="h-100px maxw-1300px mx-auto fr ac pl-50px pr-40px ">
+        <div class="logo w-60px h-60px bg-gold-3 md:w-200px lg:w-240px"></div>
+        <ul class="block f-1 pt-30px h-full fr je pb-20px fs-4 lg:font-size-1.1rem text-center">
+          <li class="px-7px">
+            <a href="#" class="block font-bold py-5">首页</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业介绍</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">企业概况</a></li>
+              <li class="py-10px"><a href="">组织架构</a></li>
+              <li class="py-10px"><a href="">企业荣誉</a></li>
+              <li class="py-10px"><a href="">法律法规</a></li>
+              <li class="py-10px"><a href="">联系我们</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="#" class="block font-bold py-5">新闻资讯</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业文化</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">企业理念</a></li>
+              <li class="py-10px"><a href="">精神文明建设</a></li>
+              <li class="py-10px"><a href="">文体活动</a></li>
+              <li class="py-10px"><a href="">员工风采</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业党建</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">党组织架构</a></li>
+              <li class="py-10px"><a href="">党建动态</a></li>
+              <li class="py-10px"><a href="">廉洁从业</a></li>
+              <li class="py-10px"><a href="">党史学习</a></li>
+            </ul><li class="px-7px"></li>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">地铁运营</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">二级内容</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">工程建设</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">总体规划</a></li>
+              <li class="py-10px"><a href="">建设动态</a></li>
+              <li class="py-10px"><a href="">质量安全</a></li>
+              <li class="py-10px"><a href="">地铁保护</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">招标采购</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">招标/比选公告</a></li>
+              <li class="py-10px"><a href="">竞争性洽<br>谈/比价公告</a></li>
+              <li class="py-10px"><a href="">单一来源/直<br>接委托公示</a></li>
+              <li class="py-10px"><a href="">中标/中选公示</a></li>
+              <li class="py-10px"><a href="">注意事项</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">人才招聘</a>
+            <ul class="fs-4">
+              <li class="py-10px"><a href="">招聘信息</a></li>
+              <li class="py-10px"><a href="">应聘须知</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="#" class="block font-bold py-5">企业公告</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  <div class="i-mdi-alarm text-orange-400 fs20"></div>
-  <div class="ic-bianji fs20"></div>
+  <div class="banner h-600px bg-blue-1"></div>
+
+  <div class="h-2000px"></div>
+
+  <div class="footer bg-gold-3 p-100">
+
+  </div>
+
+  <div class="float-tool pf bottom-20px right-20px">
+    <button class="ct w-50px h-50px bg-white border a rd">hello</button>
+  </div>
+
+  <script type="module">
+    const updateHeader = () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) header.classList.add("header-over");
+      else header.classList.remove("header-over");
+    }
+    window.addEventListener('scroll', updateHeader);
+  </script>
+
+
+
+  <!-- <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">你好 hello world</div> -->
+  <!-- <div class="i-mdi-alarm text-orange-400 fs20"></div> -->
+  <!-- <div class="ic ic-bianji fs20"></div> -->
 
   <script type="module" inline-source>
     import 'uno.css';
-    console.log(111);
   </script>
 </body>
 
