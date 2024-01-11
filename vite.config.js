@@ -1,28 +1,21 @@
 import path from 'path';
 import UnoCSS from 'unocss/vite';
 import legacy from '@vitejs/plugin-legacy';
+import handlebars from 'vite-plugin-handlebars';
 
 export default {
-  root: './src',
-  publicDir: '../public',
+  base: './',
   plugins: [
     UnoCSS(),
-    legacy({targets: 'firefox 38'}),
+    handlebars({ partialDirectory: path.resolve(__dirname, 'partials') }),
+    legacy({ targets: 'firefox 38' }),
   ],
   build: {
     rollupOptions: {
       input: {
-        'index': path.resolve(__dirname, 'src/index.html'),
-        'home': path.resolve(__dirname, 'src/home/index.html'),
-        'home/index1': path.resolve(__dirname, 'src/home/index1.html'),
+        'index': path.resolve(__dirname, 'index.html'),
+        'home': path.resolve(__dirname, 'home/index.html'),
       },
-      output: {
-        // chunkFileNames: 'static/js/[name]-[hash].js',
-        // entryFileNames: 'static/js/[name]-[hash].js',
-        // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
-      },
-    },
-    outDir: '../dist',
-    emptyOutDir: true,
-  },
+    }
+  }
 };
