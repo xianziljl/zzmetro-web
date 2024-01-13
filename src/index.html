@@ -393,15 +393,7 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
 
   <script type="module">
-    import 'uno.css';
-    const updateHeader = () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 100) header.classList.add("header-over");
-      else header.classList.remove("header-over");
-    }
-    window.addEventListener('scroll', updateHeader);
-
-    var swiperBanner = new Swiper ('.swiper-banner', {
+    const swiperBanner = new Swiper ('.swiper-banner', {
       loop: true,
       autoplay: {},
       pagination: {
@@ -410,8 +402,8 @@
       },
     });
 
-    var tabNames = ['党建动态', '党史学习教育'];
-    var swiperBanner = new Swiper ('.swiper-tab', {
+    const tabNames = ['党建动态', '党史学习教育'];
+    const swiperTab = new Swiper ('.swiper-tab', {
       autoHeight: true,
       pagination: {
         el: '.swiper-pagination-1',
