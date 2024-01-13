@@ -1,18 +1,24 @@
 <!doctype html>
 <html lang="zh-CN">
 
-{{> doc-head }}
+<head>
+  {{> doc-head }}
+  <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/css/swiper.min.css" rel="stylesheet">
+</head>
 
 <style>
-  .swiper-pagination-bullet{border-radius: 0;width: 20px;height:6px;transform: skewX(-20deg);background: white;opacity: 1;transition: all .3s;}
-  .swiper-pagination-bullet-active{background: #BC251E;width: 30px;}
+  .swiper-banner .swiper-pagination-bullet{border-radius: 0;width: 20px;height:6px;transform: skewX(-20deg);background: white;opacity: 1;transition: all .3s;}
+  .swiper-banner .swiper-pagination-bullet-active{background: #BC251E;width: 30px;}
+  .tab.swiper-pagination-bullet-active{background: #BC251E;color:white!important;}
+  .tab.swiper-pagination-bullet-active::after{content: '';display:block;width:20px;height:40px;position:absolute;right:-10px;top: 0;transform:skewX(20deg);background: #BC251E;}
 </style>
 
 <body class="m0 font-hei text-dark">
 
+
   {{> header }}
 
-  <main>
+  <main class="overflow-x-hidden">
     <section class="banner h-300px sm:h-400px md:h-600px bg-blue-1">
       <img class="size-full object-cover" src="http://www.qinbing.com/static/upload/image/20211030/1635604569544450.jpg" alt="">
     </section>
@@ -25,11 +31,11 @@
         <div class="fc ac mt-20px md:fr oh ct">
           <a class="fr ac oh p-10px" href="">
             <div class="bg-gold w-8 h-5 rd-1 mr-10px fs-3 font-bold text-white ct" style="transform: skewX(-10deg);">公告</div>
-            <span class="f1 oh text-ellipsis text-nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
+            <span class="f1 oh ellipsis text-nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
             <i class="ic ic-arrow-right fs-5 c-gold ml-10px"></i>
           </a>
           <a class="fr ac oh p-10px" href="">
-            <span class="f1 oh text-ellipsis text-nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
+            <span class="f1 oh ellipsis text-nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
             <i class="ic ic-arrow-right fs-5 c-gold ml-10px"></i>
           </a>
         </div>
@@ -38,13 +44,13 @@
     
     <section>
       <div class="h-2px bg-gold-2 pr hidden md:block">
-        <div class="w-100px h-30px pa bg-gold-1 bottom-2px"></div>
+        <div class="w-100px h-30px pa box bottom-2px"></div>
       </div>
       <div class="maxw-1300px mx-auto px-20px pb-60px lg:px-50px">
         <div class="fc md:fr">
           <div class="py-30px md:pr-30px lg:pr-80px lg:py-40px f-6">
             <div class="w-full pb-56% bg-gold-1 pr">
-              <div class="swiper pa size-full">
+              <div class="swiper-banner swiper-container pa! size-full">
                 <div class="swiper-wrapper">
                   <a class="block swiper-slide pr" href="">
                     <img class="size-full object-cover" src="https://p8.itc.cn/q_70/images03/20210907/89a051f852024481915f8b6f2be9f3f2.jpeg" alt="图片描述">
@@ -56,11 +62,9 @@
                     <img class="size-full object-cover" src="https://p5.itc.cn/q_70/images03/20210108/3d2f6715b1524290925d9c0ae4436bcf.jpeg" alt="图片描述">
                   </a>
                 </div>
-                <div class="swiper-pagination text-left pl-50px pb-10px"></div>
+                <div class="swiper-pagination swiper-pagination-0 text-left pl-50px pb-10px"></div>
               </div>
-              <div class="pa w-24px h-24px ct bg-gold right-0 bottom-0 z-2">
-                <div class="ic ic-jiantouyou font-size-12px c-white"></div>
-              </div>
+              <div class="pa w-24px h-24px ct bg-gold right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
             </div>
           </div>
           <div class="pr w-2px bg-gold-2 hidden md:block">
@@ -72,46 +76,46 @@
             <p class="font-size-0.95rem mt-20px line-height-6 f-1 oh">山河已秋万树黄，喜看稻菽千重浪。今天，满载着梦想与希冀的郑州市轨道交通10号线一期顺利实现初期运营。这条充满活力州市轨道交通10号线一期顺利实现初期运营。…</p>
             <a class="fr ac px-12px py-7px bg-fire group" href="">
               <span class="mr5px c-white">了解更多</span>
-              <i class="ic ic-arrow-right fs-6 c-white group-hover:c-white"></i>
+              <i class="ic ic-arrow-right fs-6 c-white"></i>
             </a>
           </article>
         </div>
         <ul class="grid-gap-10px grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-          <li class="pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
             <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
             <div class="b-l b-fire pl-10px">
               <div class="fr ac">
-                <h3 class="f1 text-ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <h3 class="f1 ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
                 <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
               </div>
               <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
             </div>
           </li>
-          <li class="pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
             <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
             <div class="b-l b-fire pl-10px">
               <div class="fr ac">
-                <h3 class="f1 text-ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <h3 class="f1 ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
                 <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
               </div>
               <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
             </div>
           </li>
-          <li class="pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
             <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
             <div class="b-l b-fire pl-10px">
               <div class="fr ac">
-                <h3 class="f1 text-ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <h3 class="f1 ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
                 <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
               </div>
               <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
             </div>
           </li>
-          <li class="pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
             <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
             <div class="b-l b-fire pl-10px">
               <div class="fr ac">
-                <h3 class="f1 text-ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <h3 class="f1 ellipsis oh text-nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
                 <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
               </div>
               <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
@@ -130,10 +134,11 @@
               <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
                 <div class="fr ac">
                   <div class="size-12px bg-gold rd-5px mr-10px"></div>
-                  <h3 class="f1 oh text-ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                  <h3 class="f1 oh ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
                 </div>
-                <p class="oh text-ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+                <p class="oh ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
               </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
             </a>
             <a class="py-20px fr ac group md:pl-20px" href="">
               <div class="f-1">
@@ -149,10 +154,11 @@
               <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
                 <div class="fr ac">
                   <div class="size-12px bg-gold rd-5px mr-10px"></div>
-                  <h3 class="f1 oh text-ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                  <h3 class="f1 oh ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
                 </div>
-                <p class="oh text-ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+                <p class="oh ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
               </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
             </a>
             <a class="py-20px fr ac group" href="">
               <div class="f-1">
@@ -168,10 +174,11 @@
               <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
                 <div class="fr ac">
                   <div class="size-12px bg-gold rd-5px mr-10px"></div>
-                  <h3 class="f1 oh text-ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                  <h3 class="f1 oh ellipsis text-nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
                 </div>
-                <p class="oh text-ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+                <p class="oh ellipsis text-nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
               </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
             </a>
             <a class="py-20px fr ac group" href="">
               <div class="f-1">
@@ -183,17 +190,138 @@
           </div>
         </div>
         <div class="pr h-2px bg-gold-2 hidden md:block">
-          <div class="pa w-2px bg-gold-2 h-228px -top-88px"></div>
+          <div class="pa w-2px bg-gold-2 h-268px -top-88px"></div>
           <div class="dot pa -left-9px -top-9px"></div>
         </div>
       </div>
     </section>
 
     <section class="pt-78px pb-30px">
-      <div class="sm:fr maxw-1300px mx-auto px-20px lg:px-50px">
-        <div class="sm:f3"></div>
+      <div class="md:fr maxw-1300px mx-auto px-20px lg:px-50px">
+        <div class="swiper-container swiper-tab f3 oh md:mr-50px font-size-0.9rem">
+          <div class="pa w-24px h-24px ct bg-gold right-0 top-16px z-2 ic ic-jiantouyou fs-3 c-white z-2"></div>
+          <div class="pa w-80px h-22px box top-18px right-50px"></div>
+          <div class="swiper-pagination swiper-pagination-1 pr bottom-a! text-left! b-b-2 b-gold-2"></div>
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide py-20px sm:grid sm:grid-cols-2">
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+            </ul>
+            <ul class="swiper-slide py-20px sm:grid sm:grid-cols-2">
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="sm:f2">
-          <div class="pb-56% bg-gold-1 pr"></div>
+          <div class="pb-56% bg-gold-1 pr">
+            <video class="pa size-full" controls
+              src="//samplelib.com/lib/preview/mp4/sample-5s.mp4"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="maxw-1300px px-20px lg:px-50px md:fr mx-a py-40px">
+        <div class="md:f-10">
+          <div class="sm:fr">
+            <div class="f-4 pr h-200px sm:h-300px md:h-430px">
+              <div class="size-full md:w-140% bg-gold-1 md:pa md:right-0 pr">
+                <img class="pa size-full object-cover" src="https://img1.baidu.com/it/u=3468823948,1380852864&fm=253&fmt=auto?w=989&h=800" alt="">
+                <div class="pa w-24px h-24px ct bg-gold right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+              </div>
+            </div>
+            <a class="f-2 bg-fire c-white p-30px fc h:c-white group" href="">
+              <div class="fr as">
+                <div class="hidden sm:block dot mt-3px mr-10px"></div>
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">企业文化</h2>
+                  <div class="fs-3 mt-10px c-white c-op-50">CORPORATE CULTURE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 fs-6 "></div>
+              </div>
+              <div class="f1 fc jc">
+                <div class="hidden sm:block h-1px w-8 bg-white"></div>
+                <p class="fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+            </a>
+          </div>
+          <div class="sm:fr pr">
+            <a class="pr f1 fc p-30px md:b-l-2 b-gold-2" href="">
+              <div class="fr as">
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">招标采购</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+              <div class="hidden md:block dot pa -left-9px -bottom-9px z-2"></div>
+            </a>
+            <a class="pr f1 fc p-30px md:b-l-2 b-gold-2" href="">
+              <div class="fr as">
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">人才招聘</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+              <div class="hidden md:block dot pa -left-9px -bottom-9px z-2"></div>
+            </a>
+            <div class="hidden md:block h-2px w-2000px pa bottom-0 right-0 bg-gold-2"></div>
+          </div>
+        </div>
+        <div class="md:f-4 sm:fr flex flex-col-reverse md:block md:fc">
+          <div class="h-40px box hidden md:block"></div>
+          <div class="sm:f-2 md:f-1 pr h-142px sm:h-auto">
+            <div class="pa size-full md:w-160% bg-gold-1"></div>
+              <a class="pa size-full fc p-30px md:pr-0" href="">
+              <div class="hidden md:block h-2px pa left-0 top-0 w-2000px bg-gold-2"></div>
+              <div class="fr as">
+                <div class="hidden md:block dot mt-3px mr-10px"></div>
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">员工风采</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+            </a>
+          </div>
+          <div class="sm:f-4 md:f-3 md:h-full pr minh-200px sm:minh-300px">
+            <div class="pa size-full md:w-160% bg-gold-2  left-1px">
+              <img class="pa size-full object-cover" src="https://img2.baidu.com/it/u=2870923410,1099149533&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=375" alt="" >
+              <div class="pa w-24px h-24px ct bg-gold left-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -223,7 +351,7 @@
             <span>查询</span>
           </button>
         </div>
-        <div class="bg-gold-1 p-20px fr flex-wrap justify-around md:fc">
+        <div class="fn-btns bg-gold-1 p-20px fr flex-wrap justify-around md:fc">
           <a class="fc ac jc" href="">
             <i class="ic ic-map font-size-30px p-10px b b-gold rd-50% c-gold"></i>
             <div class="fs-3 mt-10px">站点查询</div>
@@ -246,9 +374,10 @@
           </a>
         </div>
         <div class="pr hidden md:block">
-          <div class="pa w-20px h-60px ct bg-fire right-0 top-260px a rd-l-5px">
+          <button class="pa w-20px h-60px ct bg-fire right-0 top-260px a rd-l-5px"
+            onclick="document.querySelector('.fn-btns').classList.toggle('hidden!');this.querySelector('.ic').classList.toggle('rotate-180');">
             <i class="ic ic-jiantouyou c-white"></i>
-          </div>
+          </button>
         </div>
         <div class="f1 h-580px b b-gold-1 b-r-0 b-b-0">
           <img src="https://ditiemap.com/zb_users/upload/ditie/201901071546851004337898.jpg" alt="" class="size-full object-contain">
@@ -260,8 +389,8 @@
   {{> footer }}
 
   {{> float-tool }}
-
-  <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
 
   <script type="module">
     import 'uno.css';
@@ -272,23 +401,27 @@
     }
     window.addEventListener('scroll', updateHeader);
 
-    var mySwiper = new Swiper ('.swiper', {
-      loop: true, // 循环模式选项
-
-      autoplay: true,
-      
-      // 如果需要分页器
+    var swiperBanner = new Swiper ('.swiper-banner', {
+      loop: true,
+      autoplay: {},
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-0',
+        clickable: true,
+      },
+    });
+
+    var tabNames = ['党建动态', '党史学习教育'];
+    var swiperBanner = new Swiper ('.swiper-tab', {
+      autoHeight: true,
+      pagination: {
+        el: '.swiper-pagination-1',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<button class="tab pr h-40px ml-0! px-22px! w-a! rd-0 fs-4 bg-transparent font-bold a c-dark! op-100 mr-20px! ${className}">${tabNames[index]}</button>`;
+        },
       },
     });   
   </script>
-
-
-
-  <!-- <div class="fr ac p-10 f1 bg-green h:(bg-blue text-yellow) font-li">你好 hello world</div> -->
-  <!-- <div class="i-mdi-alarm text-orange-400 fs20"></div> -->
-  <!-- <div class="ic ic-bianji fs20"></div> -->
 </body>
 
 </html>
