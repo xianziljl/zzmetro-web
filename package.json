@@ -15,6 +15,7 @@
     "@unocss/transformer-compile-class": "^0.58.3",
     "@unocss/transformer-variant-group": "^0.58.3",
     "@vitejs/plugin-legacy": "^5.2.0",
+    "less": "^4.2.0",
     "unocss": "^0.58.3",
     "unocss-preset-autoprefixer": "^0.0.7",
     "unocss-preset-chinese": "^0.3.0",

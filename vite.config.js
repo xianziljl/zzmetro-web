@@ -8,7 +8,7 @@ export default {
   plugins: [
     UnoCSS(),
     handlebars({ partialDirectory: path.resolve(__dirname, 'partials') }),
-    legacy({ targets: 'firefox 38' }),
+    legacy({ targets: 'firefox 52' }),
   ],
   build: {
     rollupOptions: {

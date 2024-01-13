@@ -24,6 +24,7 @@ export default defineConfig({
     (m) => !m.startsWith('h:') ? m : { matcher: m.slice(2), selector: s => `${s}:hover` },
     (m) => !m.startsWith('f:') ? m : { matcher: m.slice(2), selector: s => `${s}:focus` },
     (m) => !m.startsWith('a:') ? m : { matcher: m.slice(2), selector: s => `${s}:active` },
+    (m) => !m.startsWith('fin:') ? m : { matcher: m.slice(4), selector: s => `${s}:focus-within` },
   ],
   theme: {
     colors: {
@@ -31,7 +32,8 @@ export default defineConfig({
       'gold-1': '#F7F4ED',
       'gold-2': '#E4DCC7',
       'gold-3': '#CBB688',
-      'fire': '#BC251E'
+      'fire': '#BC251E',
+      'dark': '#252525'
     },
     breakpoints: {
       xs: '320px',
@@ -44,6 +46,7 @@ export default defineConfig({
   rules: [
     ['fr', { 'display': 'flex', 'flex-direction': 'row' }],
     ['fc', { 'display': 'flex', 'flex-direction': 'column' }],
+    ['as', { 'align-items': 'start' }],
     ['ac', { 'align-items': 'center' }],
     ['jc', { 'justify-content': 'center' }],
     ['je', { 'justify-content': 'end' }],
@@ -67,5 +70,6 @@ export default defineConfig({
     [/^minw-?(\d+)px$/, ([, d]) => ({ 'min-width': `${d}px` })],
     [/^maxh-?(\d+)px$/, ([, d]) => ({ 'max-height': `${d}px` })],
     [/^minh-?(\d+)px$/, ([, d]) => ({ 'min-height': `${d}px` })],
+    [/^grid-gap-?(\d+)px$/, ([, d]) => ({ 'gap': `${d}px`, 'grid-gap': `${d}px` })],
   ]
 });
