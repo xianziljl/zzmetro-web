@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-  {{> doc-head }}
+  {{>doc-head}}
   <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/css/swiper.min.css" rel="stylesheet">
 </head>
 
@@ -15,92 +15,7 @@
 
 <body class="m0 font-hei text-dark">
 
-
-  <header class="header pf top-0 w-full h-80px md:h-100px z-5">
-    <div class="header-bg pa w-full h-full transition"></div>
-    <!-- <div class="accessible-tool pa w-full h-48px z-1"></div> -->
-    <nav class="header-ctn pa w-full h-80px md:h-100px oh">
-      <div class="h-80px md:h-100px maxw-1300px mx-auto fr ac pl-20px pr-20px lg:pl-50px lg:pr-50px">
-        <a class="pr block logo w-180px md:w-40px h-40px lg:h-60px lg:w-240px" href="/"></a>
-        
-        <div class="f1 md:hidden"></div>
-        <button class="menu-btn w-60px h-60px bg-transparent ic ic-menu font-size-30px md:hidden"></button>
-
-        <ul class="nav-menu hidden md:fr f-1 pt-30px h-full je pb-20px fs-4 lg:font-size-1.1rem text-center">
-          <li class="px-7px">
-            <a href="/" class="block font-bold py-5">首页</a>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">企业介绍</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="/about/">企业概况</a></li>
-              <li class="py-10px"><a href="">组织架构</a></li>
-              <li class="py-10px"><a href="">企业荣誉</a></li>
-              <li class="py-10px"><a href="">法律法规</a></li>
-              <li class="py-10px"><a href="">联系我们</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a href="#" class="block font-bold py-5">新闻资讯</a>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">企业文化</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">企业理念</a></li>
-              <li class="py-10px"><a href="">精神文明建设</a></li>
-              <li class="py-10px"><a href="">文体活动</a></li>
-              <li class="py-10px"><a href="">员工风采</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">企业党建</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">党组织架构</a></li>
-              <li class="py-10px"><a href="">党建动态</a></li>
-              <li class="py-10px"><a href="">廉洁从业</a></li>
-              <li class="py-10px"><a href="">党史学习</a></li>
-            </ul><li class="px-7px"></li>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">地铁运营</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">二级内容</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">工程建设</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">总体规划</a></li>
-              <li class="py-10px"><a href="">建设动态</a></li>
-              <li class="py-10px"><a href="">质量安全</a></li>
-              <li class="py-10px"><a href="">地铁保护</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">招标采购</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">招标/比选公告</a></li>
-              <li class="py-10px"><a href="">竞争性洽谈/比价公告</a></li>
-              <li class="py-10px"><a href="">单一来源/直接委托公示</a></li>
-              <li class="py-10px"><a href="">中标/中选公示</a></li>
-              <li class="py-10px"><a href="">注意事项</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a class="block font-bold py-5">人才招聘</a>
-            <ul class="font-size-0.95rem lg:fs-4">
-              <li class="py-10px"><a href="">招聘信息</a></li>
-              <li class="py-10px"><a href="">应聘须知</a></li>
-            </ul>
-          </li>
-          <li class="px-7px">
-            <a href="#" class="block font-bold py-5">企业公告</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
+  {{>header}}
 
   <main class="overflow-x-hidden">
     <section class="banner h-300px sm:h-400px md:h-600px bg-blue-1">
@@ -114,7 +29,7 @@
         </h1>
         <div class="fc ac mt-20px md:fr oh ct">
           <a class="fr ac oh p-10px" href="">
-            <div class="bg-gold w-8 h-5 rd-1 mr-10px fs-3 font-bold text-white ct" style="transform: skewX(-10deg);">公告</div>
+            <div class="bg-gold w-8 h-5 rd-1 mr-10px fs-3 font-bold text-white ct -skew-x-10">公告</div>
             <span class="f1 oh ellipsis text-nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
             <i class="ic ic-arrow-right fs-5 c-gold ml-10px"></i>
           </a>
@@ -284,7 +199,7 @@
       <div class="md:fr maxw-1300px mx-auto px-20px lg:px-50px">
         <div class="swiper-container swiper-tab f3 oh md:mr-50px font-size-0.9rem">
           <div class="pa w-24px h-24px ct bg-gold right-0 top-16px z-2 ic ic-jiantouyou fs-3 c-white z-2"></div>
-          <div class="pa w-80px h-22px box top-18px right-50px"></div>
+          <div class="hidden sm:block pa w-80px h-22px box top-18px right-50px"></div>
           <div class="swiper-pagination swiper-pagination-1 pr bottom-a! text-left! b-b-2 b-gold-2"></div>
           <div class="swiper-wrapper">
             <ul class="swiper-slide py-20px sm:grid sm:grid-cols-2">
@@ -470,14 +385,12 @@
     </section>
   </main>
 
-  {{> footer }}
-
-  {{> float-tool }}
+  {{>footer}}
   
   <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
 
   <script type="module">
-    const swiperBanner = new Swiper ('.swiper-banner', {
+    const swiperBanner = new Swiper('.swiper-banner', {
       loop: true,
       autoplay: {},
       pagination: {
@@ -487,7 +400,7 @@
     });
 
     const tabNames = ['党建动态', '党史学习教育'];
-    const swiperTab = new Swiper ('.swiper-tab', {
+    const swiperTab = new Swiper('.swiper-tab', {
       autoHeight: true,
       allowTouchMove: false,
       pagination: {

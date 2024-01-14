@@ -1,81 +1,115 @@
-<header class=" header pf w-full h-80px md:h-100px pr z-5">
-  <div class="header-bg pa w-full h-full transition"></div>
-  <!-- <div class="accessible-tool pa w-full h-48px z-1"></div> -->
-  <nav class="header-ctn pa w-full h-80px md:h-100px oh">
-    <div class="h-80px md:h-100px maxw-1300px mx-auto fr ac pl-20px pr-20px lg:pl-50px lg:pr-50px">
-      <a class="pr block logo w-40px h-40px lg:h-60px lg:w-240px" href="/"></a>
-      <ul class="hidden md:fr f-1 pt-30px h-full je pb-20px fs-4 lg:font-size-1.1rem text-center">
-        <li class="px-7px">
-          <a href="/" class="block font-bold py-5">首页</a>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">企业介绍</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="/about/">企业概况</a></li>
-            <li class="py-10px"><a href="">组织架构</a></li>
-            <li class="py-10px"><a href="">企业荣誉</a></li>
-            <li class="py-10px"><a href="">法律法规</a></li>
-            <li class="py-10px"><a href="">联系我们</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a href="#" class="block font-bold py-5">新闻资讯</a>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">企业文化</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">企业理念</a></li>
-            <li class="py-10px"><a href="">精神文明建设</a></li>
-            <li class="py-10px"><a href="">文体活动</a></li>
-            <li class="py-10px"><a href="">员工风采</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">企业党建</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">党组织架构</a></li>
-            <li class="py-10px"><a href="">党建动态</a></li>
-            <li class="py-10px"><a href="">廉洁从业</a></li>
-            <li class="py-10px"><a href="">党史学习</a></li>
-          </ul><li class="px-7px"></li>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">地铁运营</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">二级内容</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">工程建设</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">总体规划</a></li>
-            <li class="py-10px"><a href="">建设动态</a></li>
-            <li class="py-10px"><a href="">质量安全</a></li>
-            <li class="py-10px"><a href="">地铁保护</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">招标采购</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">招标/比选公告</a></li>
-            <li class="py-10px"><a href="">竞争性洽谈/比价公告</a></li>
-            <li class="py-10px"><a href="">单一来源/直接委托公示</a></li>
-            <li class="py-10px"><a href="">中标/中选公示</a></li>
-            <li class="py-10px"><a href="">注意事项</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a class="block font-bold py-5">人才招聘</a>
-          <ul class="font-size-0.95rem lg:fs-4">
-            <li class="py-10px"><a href="">招聘信息</a></li>
-            <li class="py-10px"><a href="">应聘须知</a></li>
-          </ul>
-        </li>
-        <li class="px-7px">
-          <a href="#" class="block font-bold py-5">企业公告</a>
-        </li>
-      </ul>
 
+  <!-- 工具栏 -->
+  <div class="hidden md:block pf w-full top-0 left-0 z-6">
+    <div class="maxw-1300px px-20px lg:px-50px mx-a pr">
+      <div class="fr ac pa right-20px lg:right-50px top-0 h-36px box c-white">
+        <div class="pa w-1000px h-full bg-gold"></div>
+        <div class="pa w-20px h-full bg-gold -left-10px -skew-x-20"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-search mr-5px"></i>
+          <span class="line-height-5">搜索</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-shangcanfukan mr-5px"></i>
+          <span class="line-height-5">无障碍阅读</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem pl-15px a">
+          <i class="ic ic-laoren mr-5px"></i>
+          <span class="line-height-5">适老模式</span>
+        </button>
+      </div>
     </div>
-  </nav>
-</header>
+  </div>
+
+
+  <header class="header pf top-0 w-full h-80px md:h-100px z-5">
+    <div class="header-bg pa w-full h-full transition"></div>
+
+
+    <nav class="header-ctn pa w-full h-80px md:h-100px oh">
+      <div class="pr h-80px md:h-100px maxw-1300px mx-auto fr ac pl-20px pr-20px lg:pl-50px lg:pr-50px">
+        
+        <!-- logo -->
+        <a class="pr block logo w-180px md:w-40px h-40px lg:h-60px lg:w-240px" href="/"></a>
+        
+        <!-- 移动端菜单按钮 -->
+        <div class="f1 md:hidden"></div>
+        <button class="menu-btn w-60px h-60px bg-transparent ic ic-menu font-size-30px md:hidden"></button>
+        
+        <!-- 导航菜单 -->
+        <ul class="nav-menu hidden md:fr f-1 pt-30px h-full je pb-20px fs-4 lg:font-size-1.1rem text-center">
+          <li class="px-7px">
+            <a href="/" class="block font-bold py-5">首页</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业介绍</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/about/">企业概况</a></li>
+              <li class="py-10px"><a href="">组织架构</a></li>
+              <li class="py-10px"><a href="">企业荣誉</a></li>
+              <li class="py-10px"><a href="">法律法规</a></li>
+              <li class="py-10px"><a href="">联系我们</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="#" class="block font-bold py-5">新闻资讯</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业文化</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">企业理念</a></li>
+              <li class="py-10px"><a href="">精神文明建设</a></li>
+              <li class="py-10px"><a href="">文体活动</a></li>
+              <li class="py-10px"><a href="">员工风采</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业党建</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">党组织架构</a></li>
+              <li class="py-10px"><a href="">党建动态</a></li>
+              <li class="py-10px"><a href="">廉洁从业</a></li>
+              <li class="py-10px"><a href="">党史学习</a></li>
+            </ul><li class="px-7px"></li>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">地铁运营</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">二级内容</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">工程建设</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">总体规划</a></li>
+              <li class="py-10px"><a href="">建设动态</a></li>
+              <li class="py-10px"><a href="">质量安全</a></li>
+              <li class="py-10px"><a href="">地铁保护</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">招标采购</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">招标/比选公告</a></li>
+              <li class="py-10px"><a href="">竞争性洽谈/比价公告</a></li>
+              <li class="py-10px"><a href="">单一来源/直接委托公示</a></li>
+              <li class="py-10px"><a href="">中标/中选公示</a></li>
+              <li class="py-10px"><a href="">注意事项</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">人才招聘</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">招聘信息</a></li>
+              <li class="py-10px"><a href="">应聘须知</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="#" class="block font-bold py-5">企业公告</a>
+          </li>
+        </ul>     
+      </div>
+    </nav>
+  </header>
