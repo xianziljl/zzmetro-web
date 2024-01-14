@@ -2,6 +2,24 @@ import path from 'path';
 import UnoCSS from 'unocss/vite';
 import legacy from '@vitejs/plugin-legacy';
 import handlebars from 'vite-plugin-handlebars';
+import walkSync from './walkSync.js';
+
+const partials = [];
+const htmls = [];
+walkSync(path.resolve(__dirname, 'src'), (pt, stat) => {
+  if (stat.isDirectory() && pt.match('partials')){
+    partials.push(pt);
+  }
+  if (stat.isFile() && pt.endsWith('.html') && !pt.match('partials')) {
+    htmls.push(pt)
+  }
+});
+
+var buildInput = {};
+htmls.forEach(pt => {
+  var key = pt.replace(/.*src\\/, '').replace(/\\/g, '/').replace('.html', '');
+  buildInput[key] = pt;
+});
 
 export default {
   base: './',
@@ -9,29 +27,13 @@ export default {
   plugins: [
     UnoCSS(),
     handlebars({
-      partialDirectory: [
-        path.resolve(__dirname, 'src/partials'),
-        path.resolve(__dirname, 'src/about/partials'),
-        path.resolve(__dirname, 'src/culture/partials'),
-      ]
+      partialDirectory: partials,
    }),
     legacy({ targets: 'firefox 52' }),
   ],
   build: {
     rollupOptions: {
-      input: {
-        'index': path.resolve(__dirname, 'src/index.html'),
-
-        'about': path.resolve(__dirname, 'src/about/index.html'),
-        'about/honers': path.resolve(__dirname, 'src/about/honers.html'),
-        'about/contact': path.resolve(__dirname, 'src/about/contact.html'),
-        'about/detail': path.resolve(__dirname, 'src/about/detail.html'),
-        'about/laws': path.resolve(__dirname, 'src/about/laws.html'),
-        'about/organization': path.resolve(__dirname, 'src/about/organization.html'),
-
-        'notice': path.resolve(__dirname, 'src/notice/index.html'),
-        'home': path.resolve(__dirname, 'src/home/index.html'),
-      },
+      input: buildInput,
       output: {
         chunkFileNames: "static/js/[name].js",
         entryFileNames: "static/js/[name].js",
