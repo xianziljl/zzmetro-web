@@ -8,7 +8,7 @@ import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
   content: {
-    filesystem: ['partials/*.html'],
+    filesystem: ['partials/*.html', '*/partials/*.html'],
   },
   transformers: [
     transformerVariantGroup(),

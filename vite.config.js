@@ -8,14 +8,27 @@ export default {
   root: path.resolve(__dirname, 'src'),
   plugins: [
     UnoCSS(),
-    handlebars({ partialDirectory: path.resolve(__dirname, 'src/partials') }),
+    handlebars({
+      partialDirectory: [
+        path.resolve(__dirname, 'src/partials'),
+        path.resolve(__dirname, 'src/about/partials'),
+        path.resolve(__dirname, 'src/culture/partials'),
+      ]
+   }),
     legacy({ targets: 'firefox 52' }),
   ],
   build: {
     rollupOptions: {
       input: {
         'index': path.resolve(__dirname, 'src/index.html'),
+
         'about': path.resolve(__dirname, 'src/about/index.html'),
+        'about/honers': path.resolve(__dirname, 'src/about/honers.html'),
+        'about/contact': path.resolve(__dirname, 'src/about/contact.html'),
+        'about/detail': path.resolve(__dirname, 'src/about/detail.html'),
+        'about/laws': path.resolve(__dirname, 'src/about/laws.html'),
+        'about/organization': path.resolve(__dirname, 'src/about/organization.html'),
+
         'home': path.resolve(__dirname, 'src/home/index.html'),
       },
       output: {
