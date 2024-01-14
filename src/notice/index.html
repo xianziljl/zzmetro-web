@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  {{> doc-head}}
+</head>
+
+<body class="m0 font-hei text-dark">
+
+  {{> header}}
+
+  <main>
+    <div class="h-380px bg-gold-2 pr">
+      <div class="maxw-1300px mx-auto px-20px lg:px-50px pt-130px fc as">
+        <div class="fr ac font-serif">
+          <div class="fs-19 c-gold mr-10px">C</div>
+          <div>
+            <div class="fs-8 c-gold">ORPORATE</div>
+            <div class="fs-4 c-white mt-5px">ANNOUNCEMENT</div>
+          </div>
+        </div>
+        <h1 class="c-white fs-9 m0">企业公告</h1>
+      </div>
+      <div class="pa w-full bottom-0">
+        <div class="maxw-1300px mx-auto md:px-20px lg:px-50px">
+          <div class="fr ac bg-white rd-t-10px overflow-x-auto px-20px b-b b-gold-2">
+            <span class="f1"></span>
+            <ul class="hidden md:fr ac h-60px">
+              <li class="ct line-height-5"><a href="/">首页</a></li>
+              <li class="ct ic ct ic-jiantouyou mx-5px"></li>
+              <li class="ct line-height-5 c-gold">企业公告</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      {{>list}}
+      {{>page}}
+    </section>
+
+  </main>
+
+  {{> footer}}
+
+</body>
+
+</html>

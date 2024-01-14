@@ -29,6 +29,7 @@ export default {
         'about/laws': path.resolve(__dirname, 'src/about/laws.html'),
         'about/organization': path.resolve(__dirname, 'src/about/organization.html'),
 
+        'notice': path.resolve(__dirname, 'src/notice/index.html'),
         'home': path.resolve(__dirname, 'src/home/index.html'),
       },
       output: {
