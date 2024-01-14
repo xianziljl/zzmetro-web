@@ -5,3 +5,12 @@ const updateHeader = () => {
   else header.classList.remove("header-over");
 }
 window.addEventListener('scroll', updateHeader);
+
+document.querySelector('.menu-btn').addEventListener('click', e => {
+  document.querySelector('.header').classList.toggle('open');
+});
+window.addEventListener('resize', e => {
+  if (window.screen.width >= 960){
+    document.querySelector('.header').classList.remove('open');
+  }
+});
