@@ -1,23 +1,9 @@
 import { defineConfig } from 'unocss';
-import path from 'path';
 import transformerCompileClass from '@unocss/transformer-compile-class';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
-import presetAutoprefixer from 'unocss-preset-autoprefixer';
 import presetUno from 'unocss/preset-uno';
 import presetChinese from "unocss-preset-chinese";
 import presetIcons from '@unocss/preset-icons';
-import walkSync from './walkSync.js';
-
-// let partials: string[] = [];
-// walkSync(path.resolve(__dirname, 'src'), (pt, stat) => {
-//   if (!stat.isDirectory() && pt.match('partials')){
-//     partials.push(pt);
-//   }
-// });
-
-// partials = partials.map(x => x.replace(/.*src\\/, '').replace(/\\/g, '/'));
-
-// console.log(partials);
 
 
 export default defineConfig({
