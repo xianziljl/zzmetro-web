@@ -1,6 +1,5 @@
 import path from 'path';
 import UnoCSS from 'unocss/vite';
-import legacy from '@vitejs/plugin-legacy';
 import handlebars from 'vite-plugin-handlebars';
 import walkSync from './walkSync.js';
 
@@ -29,11 +28,13 @@ export default {
     handlebars({
       partialDirectory: partials,
    }),
-    legacy({ targets: 'firefox 52' }),
   ],
   build: {
+    // target: 'firefox52',
+    // minify: false,
     rollupOptions: {
       input: buildInput,
+      plugins: [],
       output: {
         chunkFileNames: "static/js/[name].js",
         entryFileNames: "static/js/[name].js",

@@ -389,8 +389,8 @@
   
   <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
 
-  <script type="module">
-    const swiperBanner = new Swiper('.swiper-banner', {
+  <script>
+    var swiperBanner = new Swiper('.swiper-banner', {
       loop: true,
       autoplay: {},
       pagination: {
@@ -399,8 +399,8 @@
       },
     });
 
-    const tabNames = ['党建动态', '党史学习教育'];
-    const swiperTab = new Swiper('.swiper-tab', {
+    var tabNames = ['党建动态', '党史学习教育'];
+    var swiperTab = new Swiper('.swiper-tab', {
       autoHeight: true,
       allowTouchMove: false,
       pagination: {
