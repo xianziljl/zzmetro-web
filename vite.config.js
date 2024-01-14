@@ -30,8 +30,6 @@ export default {
    }),
   ],
   build: {
-    // target: 'firefox52',
-    // minify: false,
     rollupOptions: {
       input: buildInput,
       plugins: [],
