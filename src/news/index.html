@@ -10,9 +10,45 @@
   {{> header}}
 
   <main>
-    {{> news-top}}
+    <div class="h-380px bg-gold-2 pr" style="background: url(./imgs/news-top.jpg) center / cover;">
+      <div class="maxw-1300px mx-auto px-20px lg:px-50px pt-130px fc as">
+        <div class="fr ac font-serif">
+          <div class="fs-19 c-gold mr-10px">N</div>
+          <div>
+            <div class="fs-8 c-gold">EWS</div>
+            <div class="fs-4 c-white mt-5px">AND INFORMATIONS</div>
+          </div>
+        </div>
+        <h1 class="c-white fs-9 m0">新闻资讯</h1>
+      </div>
+      <div class="pa w-full bottom-0">
+        <div class="maxw-1300px mx-auto md:px-20px lg:px-50px">
+          <div class="fr ac bg-white rd-t-10px overflow-x-auto px-20px h-70px">
+            
+            <ul class="hidden md:fr ac">
+              <li class="ct line-height-5"><a href="/">首页</a></li>
+              <li class="ct ic ct ic-jiantouyou mx-5px"></li>
+              <li class="ct line-height-5 c-gold">新闻资讯</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    
+    <div class="maxw-1300px mx-auto px-20px lg:px-50px py-20px fr ac">
+      <select class="f1 fs-4 px-15px h-50px b b-gray-2 rd-5px mr-20px">
+        <option value="">新闻资讯</option>
+      </select>
+      <label class="f2 fr ac h-50px b b-gray-2 rd-5px">
+        <input type="text" class="f1 h-full bg-transparent px-15px fs-4" placeholder="请输入您感兴趣的内容">
+        <button class="bg-transparent ic ic-search fs-6 h-full w-50px ct a h:c-fire"></button>
+      </label>
+    </div>
+
+    {{>grid-list}}
+
+    {{>page}}
+
   </main>
 
   {{> footer}}
