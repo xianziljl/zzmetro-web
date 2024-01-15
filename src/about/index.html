@@ -3,6 +3,12 @@
 
 <head>
   {{> doc-head}}
+  <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/css/swiper.min.css" rel="stylesheet">
+  <style>
+    @media screen and (min-width: 1300px) {
+      .honer{background: url(./imgs/honer-bg.jpg) center / auto 80% no-repeat;}
+    }
+  </style>
 </head>
 
 <body class="m0 font-hei text-dark">
@@ -21,7 +27,65 @@
           <div class="ic ic-changyongtubiao-fuben-16 fs-6 c-gold"></div>
         </div>
         <div class="c-gold fs-5 mt-15px font-thin">COMPANY PROFILE</div>
-        <div class="h-600px box mt-30px"></div>
+
+        <div class="md:h-600px box mt-30px oh pr">
+
+          <div class="swiper h-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide pr">
+                <div class="pr md:pa md:size-full h-240px sm:h-360px bg-gold-1">
+                  <img class="size-full object-cover" src="https://www.eastups.com/u/cms/www/201907/19172524amf7.jpg" alt="">
+                </div>
+                <div class="pa right-0 h-full w-30% bg-white hidden md:block">
+                  <div class="pa size-full bg-white skew-x-15 right-80px"></div>
+                </div>
+                <div class="pr z-2 bg-white  md:shadow-lg md:pa py-20px md:py-40px md:px-30px md:right-0 md:top-50px md:w-50%">
+                  <div class="je hidden md:fr">
+                    <div class="w-50px h-4px bg-fire mb-20px"></div>
+                    <div class="w-20px h-20px bg-fire pa left-0 top-0"></div>
+                  </div>
+                  <p class="m0 font-size-1.1rem line-height-8">郑州地铁集团有限公司经郑州市人民政府批准，于2008年2月22日成立，2018年9月11日改制为集团公司，现注册资本金27.79亿元人民币。主要负责轨道交通项目的工程投资、建设、运营，商业房屋租赁，物业服务，通信设备租赁，建筑机械设备、建筑材料销售，设计、制作、代理、发布国内广告，从事货物和技术进出口业务，轨道交通相关业务咨询。</p>
+                  <a class="inline-flex ac h:c-fire mt-15px c-gold" href="" >了解更多<div class="ic ic-arrow-right ml-5px"></div></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide pr">
+                <div class="pr md:pa md:size-full h-240px sm:h-360px bg-gold-1">
+                  <img class="size-full object-cover" src="https://www.eastups.com/u/cms/www/201907/19172524amf7.jpg" alt="">
+                </div>
+                <div class="pa right-0 h-full w-30% bg-white hidden md:block">
+                  <div class="pa size-full bg-white skew-x-15 right-80px"></div>
+                </div>
+                <div class="pr z-2 bg-white  md:shadow-lg md:pa py-20px md:py-40px md:px-30px md:right-0 md:top-50px md:w-50%">
+                  <div class="je hidden md:fr">
+                    <div class="w-50px h-4px bg-fire mb-20px"></div>
+                    <div class="w-20px h-20px bg-fire pa left-0 top-0"></div>
+                  </div>
+                  <p class="m0 font-size-1.1rem line-height-8">郑州地铁集团有限公司经郑州市人民政府批准，于2008年2月22日成立，2018年9月11日改制为集团公司，现注册资本金27.79亿元人民币。主要负责轨道交通项目的工程投资、建设、运营，商业房屋租赁，物业服务，通信设备租赁，建筑机械设备、建筑材料销售，设计、制作、代理、发布国内广告，从事货物和技术进出口业务，轨道交通相关业务咨询。</p>
+                  <a class="inline-flex ac h:c-fire mt-15px c-gold" href="" >了解更多<div class="ic ic-arrow-right ml-5px"></div></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pa fr ac z-2 right-0 bottom-130px">
+              <div class="mr-100px"><span class="fs-8 font-bold c-gold" id="swiper-index">1</span> / <span id="swiper-count">2</span></div>
+              <button class="btn-prev w-50px h-50px rd-40px bg-white b b-fire b-dashed c-fire ic ic-jiantouzuo fs-6"></button>
+              <button class="btn-next w-50px h-50px rd-40px bg-white b b-fire b-dashed c-fire ic ic-jiantouyou fs-6 ml-30px"></button>
+            </div>
+          </div>
+
+          <div class="pa bottom-0 right-0 swiper2 h-80px w-300px oh z-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide minw-150px a">
+                <img class="size-full object-cover" src="https://www.eastups.com/u/cms/www/201907/19172524amf7.jpg" alt="">
+              </div>
+              <div class="swiper-slide minw-150px a">
+                <img class="size-full object-cover" src="https://www.eastups.com/u/cms/www/201907/19172524amf7.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -30,15 +94,29 @@
       <div class="c-gold fs-8 mt-15px font-thin text-center">ORGANIZATIONAL STRUCTURE</div>
       <div class="h-2px bg-gold-2 mt-30px ct"><div class="dot"></div></div>
       <div class="maxw-1300px mx-a px-20px lg:px-50px">
-        <div class="h-600px box mt-30px"></div>
+        <img class="mt-40px" src="./imgs/org-tree.svg" alt="组织架构图">
       </div>
     </section>
 
-    <section>
-      <div class="maxw-1300px mx-a px-20px lg:px-50px py-60px">
-        <div class="h-600px box mt-30px">
-          <h1 class="f1 m0 fs-8 text-center">企业荣誉</h1>
-          <div class="c-gold fs-8 mt-15px font-thin text-center">CORPORATE HONORS</div>
+    <section class="honer">
+      <div class="maxw-1300px mx-a px-20px lg:px-50px py-60px pr">
+        <div class="lg:h-480px">
+          <div class="w-full lg:pa lg:left-0 lg:top-340px text-center">
+            <h1 class="f1 m0 fs-8">企业荣誉</h1>
+            <div class="c-gold fs-8 mt-15px font-thin text-center">CORPORATE HONORS</div>
+            <a class="bg-gold c-white inline-flex ac p-10px px-20px h:bg-fire mt-30px" href="">
+              <span>了解更多</span>
+              <div class="ic ic-arrow-right fs-5 ml-5px"></div>
+            </a>
+          </div>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 text-center c-gold mt-20px grid-gap-20px">
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-100 left-100px top-200px">2019年度重点项目建设先进集体</li>
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-120 left-0 top-300px">2019年度重点项目建设先进集体</li>
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-90 left-0 top-400px">2019年度重点项目建设先进集体</li>
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-110 left-900px top-200px">2019年度重点项目建设先进集体</li>
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-100 left-1000px top-300px">2019年度重点项目建设先进集体</li>
+            <li class="px-30px py-15px rd-30px lg:shadow-lg bg-white b b-gray-1 lg:pa lg:scale-90 left-1000px top-400px">2019年度重点项目建设先进集体</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -64,6 +142,33 @@
   </main>
 
   {{> footer}}
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
+
+  <script>
+    function init() {
+      var swiper2 = new Swiper('.swiper2', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+      });
+
+      var swiper1 = new Swiper('.swiper', {
+        thumbs: { swiper: swiper2 },
+        navigation: {
+          nextEl: ".btn-next",
+          prevEl: ".btn-prev",
+        },
+        on:{
+          slideChange: function(){
+            document.querySelector('#swiper-index').innerText = this.activeIndex + 1;
+            document.querySelector('#swiper-count').innerText = this.slides.length;
+          },
+        },
+      });
+    }
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
 
 </body>
 
