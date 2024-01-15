@@ -65,6 +65,7 @@ export default defineConfig({
     ['oyh', { 'overflow-y': 'hidden' }],
     ['box', { 'box-shadow': '0 0 0 1px inset cyan' }],
     ['ellipsis', { 'overflow': 'hidden', 'text-overflow': 'ellipsis', 'white-space': 'nowrap' }],
+    ['nowrap', {'white-space': 'nowrap'}],
     ['a', { 'cursor': 'pointer' }],
     [/^fs-?(\d+)$/, ([, d]) => ({ 'font-size': `${+d / 4}rem` })],
     [/^maxw-?(\d+)px$/, ([, d]) => ({ 'max-width': `${d}px` })],
