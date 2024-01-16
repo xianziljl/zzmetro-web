@@ -46,6 +46,7 @@ export default defineConfig({
     ['fc', { 'display': 'flex', 'flex-direction': 'column' }],
     ['as', { 'align-items': 'start' }],
     ['ac', { 'align-items': 'center' }],
+    ['ae', { 'align-items': 'end' }],
     ['jc', { 'justify-content': 'center' }],
     ['je', { 'justify-content': 'end' }],
     ['ct', { 'display': 'flex', 'align-items': 'center', 'justify-content': 'center' }],
