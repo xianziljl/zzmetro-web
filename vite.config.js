@@ -2,6 +2,8 @@ import path from 'path';
 import UnoCSS from 'unocss/vite';
 import handlebars from 'vite-plugin-handlebars';
 import walkSync from './walkSync.js';
+import imagemin from 'vite-plugin-imagemin'
+
 
 const partials = [];
 const htmls = [];
@@ -28,6 +30,7 @@ export default {
   plugins: [
     UnoCSS(),
     handlebars({ partialDirectory: partials }),
+    imagemin(),
   ],
   build: {
     rollupOptions: {
