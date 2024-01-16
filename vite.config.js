@@ -5,7 +5,9 @@ import walkSync from './walkSync.js';
 
 const partials = [];
 const htmls = [];
-walkSync(path.resolve(__dirname, 'src'), (pt, stat) => {
+const srcDir = path.resolve(__dirname, 'src');
+
+walkSync(srcDir, (pt, stat) => {
   if (stat.isDirectory() && pt.match('partials')){
     partials.push(pt);
   }
@@ -16,18 +18,16 @@ walkSync(path.resolve(__dirname, 'src'), (pt, stat) => {
 
 var buildInput = {};
 htmls.forEach(pt => {
-  var key = pt.replace(/.*src\\/, '').replace(/\\/g, '/').replace('.html', '');
+  var key = pt.replace(/.*src(\\|\/)/, '').replace(/\\/g, '/').replace('.html', '');
   buildInput[key] = pt;
 });
 
 export default {
   base: './',
-  root: path.resolve(__dirname, 'src'),
+  root: srcDir,
   plugins: [
     UnoCSS(),
-    handlebars({
-      partialDirectory: partials,
-   }),
+    handlebars({ partialDirectory: partials }),
   ],
   build: {
     rollupOptions: {
