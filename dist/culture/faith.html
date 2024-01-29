@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="../assets/iconfont/iconfont.css"> -->
+  <title>郑州地铁</title>
+  <style>
+    p{white-space: pre-wrap;}
+    img{width: 100%;margin-top: 1em;margin-bottom: 1em;}
+  </style>
+  <script type="module" crossorigin src="../static/js/__uno.js"></script>
+  <link rel="stylesheet" crossorigin href="../static/css/__uno.css">
+</head>
+
+<body class="m0 font-hei text-dark">
+
+  <!-- 公共 Header 开始 -->
+  
+  <!-- 工具栏 -->
+  <div class="hidden md:block pf w-full top-0 left-0 z-12">
+    <div class="maxw-1540px px-20px lg:px-50px mx-a pr">
+      <div class="fr ac pa right-20px lg:right-50px top-0 h-36px box c-white">
+        <div class="pa w-1000px h-full bg-gold"></div>
+        <div class="pa w-20px h-full bg-gold -left-10px -skew-x-20"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-search mr-5px"></i>
+          <span class="line-height-5">搜索</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-shangcanfukan mr-5px"></i>
+          <span class="line-height-5">无障碍阅读</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem pl-15px a">
+          <i class="ic ic-laoren mr-5px"></i>
+          <span class="line-height-5">适老模式</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <header class="header pf top-0 w-full h-80px md:h-100px z-11">
+    <div class="header-bg pa w-full h-full transition"></div>
+  
+    <nav class="header-ctn pa w-full h-80px md:h-100px oh">
+      <div class="pr h-80px md:h-100px maxw-1540px mx-auto fr ac pl-20px pr-20px lg:pl-50px lg:pr-50px">
+  
+        <!-- logo -->
+        <a class="pr block logo w-180px md:w-40px h-40px lg:h-60px lg:w-240px" href="/"></a>
+  
+        <!-- 移动端菜单按钮 -->
+        <div class="f1 md:hidden"></div>
+        <button class="menu-btn w-60px h-60px bg-transparent ic ic-menu font-size-30px md:hidden"></button>
+  
+        <!-- 导航菜单 -->
+        <ul class="nav-menu hidden md:fr f-1 pt-30px h-full je pb-20px fs-4 lg:font-size-1.1rem text-center">
+          <li class="px-7px">
+            <a href="/" class="block font-bold py-5">首页</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业介绍</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/about/index.html">企业概况</a></li>
+              <li class="py-10px"><a href="/about/organization.html">组织架构</a></li>
+              <li class="py-10px"><a href="/about/honers.html">企业荣誉</a></li>
+              <li class="py-10px"><a href="/about/laws.html">法律法规</a></li>
+              <li class="py-10px"><a href="/about/contact.html">联系我们</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="/news/index.html" class="block font-bold py-5">新闻资讯</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/culture/index.html">企业文化</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/culture/faith.html">企业理念</a></li>
+              <li class="py-10px"><a href="/culture/spiritual.html">精神文明建设</a></li>
+              <li class="py-10px"><a href="/culture/activities.html">文体活动</a></li>
+              <li class="py-10px"><a href="/culture/styles.html">员工风采</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/party/index.html">企业党建</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/party/organization.html">党组织架构</a></li>
+              <li class="py-10px"><a href="/party/news.html">党建动态</a></li>
+              <li class="py-10px"><a href="/party/integrity.html">廉洁从业</a></li>
+              <li class="py-10px"><a href="/party/">党史学习</a></li>
+            </ul>
+          <li class="px-7px"></li>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">地铁运营</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">二级内容</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/construction/index.html">工程建设</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/construction/index.html">总体规划</a></li>
+              <li class="py-10px"><a href="/construction/news.html">建设动态</a></li>
+              <li class="py-10px"><a href="/construction/">质量安全</a></li>
+              <li class="py-10px"><a href="/construction/">地铁保护</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/bidding/index.html">招标采购</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/bidding/bulletin.html">招标/比选公告</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">竞争性洽谈/比价公告</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">单一来源/直接委托公示</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">中标/中选公示</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">注意事项</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/jobs/index.html">人才招聘</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/jobs/index.html">招聘信息</a></li>
+              <li class="py-10px"><a href="/jobs/">应聘须知</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="/bulletin/" class="block font-bold py-5">企业公告</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <script>
+    var updateHeader = () => {
+      var header = document.querySelector('header');
+      if (window.scrollY > 100) header.classList.add("header-over");
+      else header.classList.remove("header-over");
+    };
+    window.addEventListener('scroll', updateHeader);
+    // 移动端菜单按钮
+    document.querySelector('.menu-btn').addEventListener('click', e => {
+      document.querySelector('.header').classList.toggle('open');
+    });
+    window.addEventListener('resize', e => {
+      if (window.screen.width >= 960) {
+        document.querySelector('.header').classList.remove('open');
+      }
+    });
+  </script>
+  
+  <!-- 公共 Header 结束 -->
+
+  <main>
+    <div class="h-380px bg-gold-2 pr" style="background: url(../static/jpg/culture-top.jpg) center / cover;">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px pt-130px fc as">
+        <div class="fr ac font-serif">
+          <div class="fs-19 c-gold mr-10px">C</div>
+          <div>
+            <div class="fs-8 c-gold">ORPORATE</div>
+            <div class="fs-4 c-white mt-5px">CULTURE</div>
+          </div>
+        </div>
+        <h1 class="c-white fs-9 m0">企业文化</h1>
+      </div>
+      <div class="pa w-full bottom-0">
+        <div class="maxw-1540px mx-auto md:px-20px lg:px-50px">
+          <div class="fr ac bg-white rd-t-10px overflow-x-auto px-20px b-b b-gold-2">
+            <ul class="f1 fr ac fs-4 nowrap">
+              <!-- 添加 b-b-2 b-fire c-fire 类，来高亮标签 -->
+              <li><a class="block lg:px-25px px-15px py-25px b-b-2 b-fire c-fire" href="/culture/">企业理念</a></li>
+              <li><a class="block lg:px-25px px-15px py-25px" href="/culture/spiritual.html">精神文明建设</a></li>
+              <li><a class="block lg:px-25px px-15px py-25px" href="/culture/activities.html">文体活动</a></li>
+              <li><a class="block lg:px-25px px-15px py-25px" href="/culture/styles.html">员工风采</a></li>
+            </ul>
+            <ul class="hidden md:fr ac">
+              <li class="ct line-height-5"><a href="/">首页</a></li>
+              <li class="ct ic ct ic-jiantouyou mx-5px"></li>
+              <li class="ct line-height-5 c-gold">企业文化</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <article class="maxw-1540px mx-a px-20px lg:px-50px pt-60px pb-100px">
+        <img src="../static/jpg/hexin-1.jpg" alt="">
+        <p>第一条 企业使命：畅通市民出行, 美丽城市生活
+【阐释】
+畅通市民出行：
+我们以轨道交通建设和运营为核心，致力于通过建设精品地铁，提供优质服务，为畅通市民出行服务。
+美丽城市生活：
+作为快捷交通的先锋，我们致力于改善出行民生，提升城市的交通品位，让轨道交通融入市民的日常生活。
+作为城市文化的窗口，我们致力于塑造华美的地下景观，践行文明的出行理念，美丽绿城的人文环境。
+作为资源汇集的走廊，我们致力于协同城市的规划，孕育上盖商圈的价值成长，助力绿城的经济发展。
+畅通市民出行，美丽城市生活：
+我们以畅通出行和美丽城市为衡量事业的指针，致力于成为商都交通的主干道、美丽绿城的风景线，繁荣经济的增长极。
+第二条 企业愿景:都市动脉，领航中原
+【阐释】
+都市动脉：
+我们承载政府的重托，从乘客的需求出发，统筹设计，全面规划，以一流的人才和设备为支撑，积极提升企业管理，不断提升建设与服务水平，致力于打造精品地铁，传递优质服务，使地铁成为都市有机体奔腾不息的动脉。
+领航中原：
+我们追求的长远目标，是实施“四位一体”为战略，投融资、建设、运营、资源开发四大业务互为补充、协同共进，通过卓越的社会效益与良好的经济效益，成为大中原区交通运输行业的领跑者和城市发展的脊梁。作为城市基础设施领域的重要一员，我们倡导文明理念，践行郑州精神，诠释城市风采，致力于成为一家富有魅力的企业。
+第三条 核心价值观：厚德载道，大爱致远
+【阐释】
+厚德：
+“道”与“德”在中国文化中是含义深厚的两个概念。其中德为儒家所倡导，是中国人文主义的核心范畴。作为人类修为的目标，道德品质是文明行为的体现。
+对郑州轨道人而言，“德”首先意味着我们要注重自身品德的修养，从我做起，向市民传递文明的正能量，营造出文明的乘车环境。其次，“德”还意味着我们要强化乘客导向的服务意识。无论建设者，或是服务人员，要学会用市民的眼睛发现问题，用市民的脚步感受问题，用市民的思想分析问题，从市民的需求解决问题。通过以以心感人，以德服人，打造品质地铁、民心地铁。
+载道：
+道为道家所倡导，是中国自然主义的灵感源泉。道在中文中有多种含义，既可以指道路，也可以解读为万事万物运动的规律。
+对郑州轨道人而言，载道，意味着我们要尊重人与自然的客观规律。
+厚德载道：
+我们为之奋斗的地下空间，曾经孕育了灿烂的古代文化。文明的继往开来是郑州轨道建设的应有之义。这种文明，既包括了作为硬件的空间构造，更体现于作为软件的行为风尚。
+厚德载道，即倡导以人文关怀经营地铁，营造文明的乘车环境；尊重人与自然运动的客观规律，实现企业的可持续发展。
+大爱致远：
+郑州轨道人的爱是关心和温情。地铁不是冰冷的运载工具，只有承载了人与人之间的温情，才能抵达更久更远的境界。
+大爱则意味着责任的坚守、不求回报的付出、对人本身的尊重以及服务乘客的激情。郑州轨道致力于发展成为一家公共效益突出的长青企业，需要我们以润物无声的大爱，让公众切实感受到便利愉悦的交通服务。
+第四条 企业精神：责任担当，共进超越
+【阐释】
+责任担当：
+主动承担责任是优秀轨道人的必备素质。敢于承担责任，才能承担更大的责任。我们以“战争年代怕死不当共产党员，和平时期怕苦不干地铁工程 ”的气魄，不畏烦、敢碰硬，敢于对自己的工作负责，敢于承当工作中的失误和困难。
+共进：
+我们在一起共事，共创事业，共担责任，相互包容，共享成果是我们的信念。我们与企业共同成长，荣辱与共：
+顺境时，再接再厉、居安思危；
+变革时，理解支持、积极配合；
+困难时，挺身而出、同舟共济。
+超越：
+我们不畏惧发展中遇到的问题与挑战，以“智慧创造价值、学习创造未来”为信念，以更快、更高、更强为目标，勇争第一、追求卓越。
+我们倡导以下三个层面的超越——
+超越自我：跟自己较劲，把每件工作做的更完美。
+超越同事：跟同事良性竞争，敢坐第一排，敢争第一名。
+超越同业：跟同行良性竞争，在学习中追赶，在赶超中卓越。
+共进超越：
+通过彼此的分享、帮助和竞争，实现共同的成长与进步，共同打造卓越的地铁品牌。</p>
+        <img src="../static/jpg/linian-1.jpg" alt="">
+<p>
+第一条 管理理念：合规励行，人和事效
+【阐释】
+合规励行：
+地铁是复杂的公共工程。要保障投融资、建设、运营工作的顺畅，要求我们建立科学系统、以人为本的制度体系，清晰规范的工作流程，构建责权利分明的管理秩序。郑州轨道将严格执行公司的各项规章制度，以制度激励人和约束人，建立井然有序的内部控制体系。
+人和事效：
+效率和效益是企业的运营目标，同时效率与公平是企业运营的基本矛盾。”人心齐，泰山移“，郑州轨道致力于营造公平的制度环境、构建核心价值观体系，创造和谐的组织氛围，促进部门间的分工协作，以合作与和谐创造效率效益。
+第二条 人才理念：尊重，凝聚，培育，成就
+【阐释】
+尊重(人)：
+尊重人才是郑州轨道人事管理的基础。我们认为人人是人才，只要任用得当则人人可成才。我们尊重每位员工的工作贡献，为每位员工提供公平的成长平台。
+凝聚(人)：
+凝聚人是郑州轨道团队建设的原则。我们认为齐心合力则无坚不摧，致力于营造团结和谐、坦诚相待的企业氛围。
+培育(人)：
+培育人才是郑州轨道人才工程的信念。我们搭建阳光晋升平台，激励人才自我成长。我们坚持体系育人与工作育人相结合，积极构造完善的培训体系，建立传帮带机制，在工作中锻炼人考察人，建立人才培育机制。
+成就(人)：
+成就人是郑州轨道对员工成长的承诺。我们搭建任人唯贤、用其所长、优胜劣汰、动态平衡的事业平台，鼓励人才在企业平台上实现人生的价值。
+第三条 经营理念：协同城市发展，创新引领未来
+【阐释】
+协同城市发展：
+地铁的发展与城市的发展存在相互推动的关系。我们奉行协同城市发展的理念，根据自身发展水平，以及城市空间拓展的趋势，以对沿线区域发展的推动效益最大化为目标，适时顺应，适时引领，保持协同，成为城市发展空间的推动器。
+创新引领未来：
+创新是企业取之不尽、用之不竭的成长源泉。我们积极打造创新引擎，以金融创新丰富企业的融资渠道，以经营创新提高资源开发水平，以技术创新改善建设与运营效率，以服务创新提升乘客的满意度，推动企业持续发展。
+根据企业的经营范围，我们进一步对经营中的建设、运营和资源开发等三方面工作进行了理念梳理。
+1 建设理念:精品，人文，科技，平安，环保
+【阐释】
+精品：
+精品地铁是建设工作的落脚点。我们的建设工作，追求在土建、设计、设备、技术、安全管理等方面实现行业领先。
+人文：
+人文地铁是地铁工程的灵魂。中原文化源远流长，我们的地铁建设，要从博大深厚的地域文化中汲取营养，为郑州地铁注入地域特色与文化底蕴。
+科技：
+科技地铁是运营体验的保障。科技是第一生产力，是地铁品质的保障。我们的建设，追求先进的科技水平，为精品地铁奠定坚实的基础。
+平安：
+安全地铁是地铁经营的关键诉求。安全是地铁运营的前提，地铁安全备受社会的广泛关注。离开了安全，我们的建设将乏善可陈。我们追求建设过程的零事故与建设结果的零隐患。
+环保：
+环保地铁是时代主旋律的必然追求。郑州未来的发展既要金山银山，也要青山绿水。作为城市的文明窗口，我们的地铁建设要在宏观和细节中践行环保理念，令我们的工程成为环保型交通方式的典范。
+2.运营理念:安全，高效，优质，精益
+【阐释】
+安全：
+没有安全，就没有运营。安全是运营的基础、运营的根本、运营的生命线。我们的员工应树立安全至上的责任意识，确保运营的绝对安全。
+高效：
+高效指效能高、效力大。我们通过优化资源配置，提高工作效率，快速响应需求，快速解决问题。
+优质：
+作为轨道交通行业，我们不可能提供五星级宾馆的豪华服务，但我们要从乘客需求出发，结合实际条件，提供优质的服务。我们以持续提升客户满意度为追求，不懈提升服务水平，提供令乘客舒心、愉悦的服务。
+精益：
+精即少，益即多。即以优化的资源投入，创造良好的社会效益和经济效益。在提供优质服务同时，将各种浪费降至最低。
+3.资源开发理念:整合优势资源，聚焦战略市场
+【阐释】
+整合优势资源:
+通过整合资源来打造战斗力，是企业经营的要义之一。郑州轨道优先整合企业效益显著、易于整合的优势资源。
+聚焦战略市场：
+在目标市场的选择上，郑州轨道侧重于经济效益与社会效益突出的战略市场。在经营方略上，郑州轨道采用聚焦战略，将精力集中于做专做强少量的若干领域，培育这些领域的核心竞争优势。
+整合优势资源，聚焦战略市场：
+我们的企业处于筚路蓝缕的初创阶段，自身的资源与能力相对有限。这就要求我们放弃四面出击的游击思维，在资源开发上优先发展外部存在战略机遇，自身又具备核心优势的业务领域。
+第四条 安全理念：敬畏生命，守护幸福
+【阐释】
+敬畏生命：
+安全意识，源于对生命本身的赞叹和敬畏。对安全的忽视，就等同于对生命的亵渎。敬畏生命是郑州轨道人的价值信念，也是郑州轨道对安全工作的基本认识。
+郑州轨道人关爱生命，珍惜生命，尊重生命，倡导重视安全，为生命负责。郑州轨道人认为，安全来自长期警惕，事故源于瞬间麻痹。
+守护幸福：
+我们的事业是为了增进市民的出行幸福，而生命是人的最大幸福。只有安全的发展才是科学的发展，只有发展中的安全才是有价值的安全。我们认为，唯有人人对安全负责，才能保证事事平安，家家幸福。
+我们的安全体系：
+郑州轨道以先进的理念统领安全，用完善的组织推行安全，用健全的制度落实安全，用优质的资源支持安全，用领先的科技保障安全，实现平安地铁的目标。
+第五条 质量理念：防微杜渐，至臻至善
+【阐释】
+防微杜渐：
+质量问题的酿成都有一个萌芽、发展的阶段。它在最初的时候还是小错误，这时候如果未能发现，或未加制止，结果就会演变成大的事故，令过程中所有的努力变成徒劳。
+轨道交通的质量无小事。对于质量工作，我们的工作人员要有防微杜渐的意识和能力，将质量事故的发生防控在萌芽阶段。
+好产品与坏产品的差异在于细节。见微知著能力的养成，固然需要经验的累计，更需要我们培养耐心和细心的习惯。
+至臻至善：
+我们对质量的追求是尽善尽美。我们积极建立持续改进的质量管理机制，不断提升企业各环节工作的质量水平。我们的工作成果只有卓越的标杆，没有遗憾的艺术。
+第六条 品牌理念：道行简，心悦远
+【阐释】
+道行简:
+郑州轨道为市民服务，致力于提供一流的轨道交通设施，提供安全、准点、优质、便捷的出行选择和全方位的交通环境。我们以人为本，致力实现越来越顺畅的城市交通，越来越便捷的出行感受。
+心悦远:
+郑州轨道追求人我和敬、社会和乐，追求人与自然的和谐，致力于构建一条和谐、快乐的文明之旅，践行城市文明出行，在身心和悦之中，顺道畅达目的地。
+道行简，心悦远:
+为乘客创造便捷的出行条件，以及愉悦的出行体验，是郑州轨道企业品牌的核心内涵。
+第七条 服务理念：真诚一路，情润万家
+【阐释】
+真诚一路：
+郑州轨道人在每一天的平凡的岗位，以细心、贴心、热心的真心，以诚信、诚恳、诚挚的诚意，为乘客传递一路全程的优质服务。
+情润万家：
+我们的服务，在细微的言行中播种滋润人心的温暖，将我们对乘客的真情传递到这座城市的千家万户。
+</p>
+        <img src="../static/jpg/xingwei-1.jpg" alt="">
+<p>
+第一条 管理人员行为准则：善任，垂范，尊重，担当
+【阐释】
+善任：
+察人见微知著，用人丝丝入扣，是识人、用人的境界。我们的管理者应主动育人，肩负起部门的人才梯队建设。
+垂范：
+上有所好，下必从之，企业的风气取决于管理层。管理人员应以身作则，做员工的榜样。
+尊重：
+尊重他人，营造相互尊重的氛围；尊重其他部门，增进部门之间的信任。
+担当：
+工作中敢担责，能负重方能致远。犯错误不推诿，能知过方能勇进。能扛责任，勇于挑战，是从平庸到卓越不可逾越的途径。
+第二条 基层工作者行为准则：敬业，规范，守纪，团结
+【阐释】
+敬业：
+忠于企业，爱岗敬业。
+规范：
+勤学技能，言行规范。
+守纪：
+遵章守纪，服从管理。做到三个一致：思想一致、忠于职守无杂念；口径一致、顾全大局无杂音；目标一致、勇往直前无斜劲儿。
+团结：
+尊重他人，团结互助。
+</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- 公共 Footer 开始 -->
+  
+  <footer class="footer">
+    <div class="py-20px bg-gold-1">
+      <dl class="maxw-1540px mx-auto px-20px lg:px-50px ct flex-wrap">
+        <dt class="font-size-1.1rem mr-20px hidden md:block">友情连接</dt>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link05.png" alt="南京地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link01.png" alt="北京地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link02.png" alt="上海地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link03.png" alt="广州地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link04.png" alt="深圳地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="../static/png/link06.png" alt="香港地铁Logo"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="bg-gold-3 border-t-10px border-fire">
+      <div class="py-30px maxw-1540px mx-auto px-20px lg:px-50px pr md:minh-180px">
+        <ul class="fr flex-wrap c-white fs-3">
+          <li class="mr-40px my-5px"><a href="">公司介绍</a></li>
+          <li class="mr-40px my-5px"><a href="">新闻资讯</a></li>
+          <li class="mr-40px my-5px"><a href="">企业文化</a></li>
+          <li class="mr-40px my-5px"><a href="">企业党建</a></li>
+          <li class="mr-40px my-5px"><a href="">地铁运营</a></li>
+          <li class="mr-40px my-5px"><a href="">工程建设</a></li>
+          <li class="mr-40px my-5px"><a href="">招标采购</a></li>
+          <li class="mr-40px my-5px"><a href="">人才招聘</a></li>
+          <li class="mr-40px my-5px"><a href="">企业公告</a></li>
+        </ul>
+        <i
+          class="hidden md:block ic pa right-10px lg:right-50px top-20px ic-changyongtubiao-fuben-16 c-gold-2 font-size-40px"></i>
+        <div class="hidden md:block pa w-170px h-48px bottom-0"  style="background: url(./assets/imgs/metro.png);background-size: 100%;"></div>
+        <div class="hidden md:block pa w-190px h-110px bottom-0 right-300px" style="background: url(./assets/imgs/city.png);background-size: 100%;"></div>
+        <div class="hidden md:block pa w-140px h-37px bottom-20% right-20px lg:right-50px">
+          <img src="../static/png/logo-0.png" class="size-full" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white bg-gold-3 border-op-40">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px c-white fc lg:fr">
+        <div class="md:fr">
+          <div class="f1 md:border-r border-gold-2 md:py-20px pr-22px pr">
+            <h3 class="font-size-0.95rem">公司地址：</h3>
+            <p class="fs-3">郑州市郑东新区康宁街100号</p>
+            <p class="fs-3">邮编：450000</p>
+            <p class="font-size-0.7rem">100 Kangning Street, Zhengdong New District, Zhengzhou City</p>
+            <div class="hidden md:block dot pa -right-10px -top-10px"></div>
+          </div>
+          <div class="f1 md:border-r border-gold-2 md:py-20px md:px-22px pr">
+            <h3 class="font-size-0.95rem">联系方式：</h3>
+            <p class="fs-3">乘客服务热线：0371-55166166（每天8:30-20:00）</p>
+            <p class="fs-3">传真：0371-55165516/55166617（工作日9:00—17:00）</p>
+            <p class="fs-3">24小时应急值班电话：0371-55165516</p>
+            <div class="hidden md:block dot pa -right-10px -top-10px"></div>
+          </div>
+          <div class="f1 md:py-20px md:px-22px pr">
+            <h3 class="font-size-0.95rem">电子邮箱：</h3>
+            <p class="fs-3">zzmetro@zzmetro.cn</p>
+          </div>
+        </div>
+        <div class="f1 xs:fr">
+          <div class="f1 lg:pl-20px pr-20px py-20px">
+            <img class="w-full" src="../static/jpg/qr-weixin.jpg" alt="郑州地铁微信公众号二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁微信</div>
+          </div>
+          <div class="f1 pr-20px py-20px">
+            <img class="w-full" src="../static/jpg/qr-weixin-1.jpg" alt="郑州地铁资讯微信二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁资讯微信</div>
+          </div>
+          <div class="f1 py-20px">
+            <img class="w-full" src="data:image/jpeg;base64,/9j/4QDYRXhpZgAASUkqAAgAAAAIABIBAwABAAAAAQAAABoBBQABAAAAbgAAABsBBQABAAAAdgAAACgBAwABAAAAAgAAADEBAgAQAAAAfgAAADIBAgAUAAAAjgAAABMCAwABAAAAAQAAAGmHBAABAAAAogAAAAAAAABIAAAAAQAAAEgAAAABAAAAQUNEU2VlIL/sy9my6b+0ADIwMTY6MTI6MTQgMTA6MTQ6NTAAAwCQkgIABAAAADM0MAACoAQAAQAAABgBAAADoAQAAQAAABgBAAAAAAAAAAAAAP/AABEIARgBGAMBIQACEQEDEQH/2wCEAAIBAQEBAQIBAQECAgICAwUDAwICAwYEBAMFBwYHBwcGBwYICQsJCAgKCAYHCg0KCgsMDA0MBwkODw4MDwsMDAwBAwMDBAMECAQECBIMCgwSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv/EAEwAAQEBAAAAAAAAAAAAAAAAAAAKCRABAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A38AAAAAAAAAAAAAAAAAAAAAAAAQBgAAAAv8AEAYAC/xAGC/wAQBgv8QBgv8AEAYL/AEAYC/xAGAAAAC/wAQBgv8AAAAQBgv8QBgv8QBgv8QBgv8AAEAa/wAAAEAYL/EAYL/ABAGC/wAAABAGC/wAQBgv8QBgAL/EAYL/ABAGAAv8QBgL/AQBr/AAEAa/wEAYAv8AAEAYL/EAYAC/xAGC/wAAEAYL/EAYAC/xAGC/wBAGv8AQBgv8AEAYL/EAYL/EAYL/ABAGAAv8QBgv8QBgAL/EAYL/AAAQBgv8QBgAL/EAYL/ABAGC/wAQBgv8QBgL/AQBr/AAAAAEAYL/ABAGAAv8QBgv8AEAYL/AAAQBgv8AEAYL/AEAYC/xAGAv8BAGAL/AQBr/AAEAYC/xAGC/wAAEAYL/AAAQBgAAAAv8QBgv8QBgv8QBgv8AEAYL/EAYL/EAYL/EAYL/ABAGC/xAGC/xAGAAAAC/wAAAAAAEAYAAAv8AEAYC/wAAQBgv8AQBr/AQBr/AAAAAAAAAEAYAC/xAGC/xAGC/xAGC/wAQBgL/AAEAYC/xAGAAv8QBgAAAv8AQBgAL/AAAAQBr/AABAGC/wBAGv8AQBgv8QBgAL/AEAa/wEAa/wEAYC/wAAEAYL/ABAGC/xAGAAAL/ABAGC/xAGAv8BAGAL/AQBgAAv8AQBgAC/wAAAQBr/AABAGAv8BAGv8AAEAYAAv8AAEAYC/wABAGAAAAAv8AQBgC/wAAAEAYAC/xAGAAv8QBgL/AQBr/AEAYC/wABAGAL/AQBgL/AEAYC/wAAQBr/AAAAQBgv8AAEAa/wBAGAAv8AEAYAAAv8QBgAL/EAYC/wBAGC/wAAQBgL/EAYL/ABAGC/xAGC/wAAQBgL/AABAGAv8QBgL/AQBr/AQBgL/EAYL/AEAYAv8AQBgL/AABAGC/wAAAEAYC/xAGC/xAGC/wAAQBr/AAEAa/wEAYAAAL/EAYL/AABAGAAL/ABAGC/xAGAAv8QBgv8AEAYL/EAYL/AEAYC/wBAGAv8AEAYL/EAYL/EAYC/wEAYC/wAAQBgL/ABAGC/wAAAEAYAAv8QBgAL/AAAAABAGAAv8QBgv8AABAGC/wAAEAYL/AABAGAAL/AEAYC/wAQBgv8QBgv8AAEAYC/xAGC/xAGC/wAQBgL/AAAAAEAYL/ABAGC/xAGC/xAGC/wAQBgv8QBgL/AQBgAAAL/AAEAYAv8AAEAYC/wAAQBgAAAv8BAGv8BAGv8AQBgv8AAABAGAL/AQBgC/wEAa/wAAQBgAC/wABAGv8BAGv8BAGAAL/ABAGC/xAGC/xAGAv8AAEAYL/ABAGC/wAAQBgL/ABAGC/xAGC/wAQBgv8QBgv8QBgAL/EAYL/AABAGAv8AEAYL/EAYL/AABAGAAC/wAAQBgv8QBgv8AAAAAQBr/AEAYL/ABAGAAL/AAEAYC/wAAQBr/AQBgAC/wAAEAYL/AEAa/wBAGC/xAGC/wAQBgAL/EAYL/AEAYAAv8QBgv8AEAYAAAv8AQBgL/AAAAAAAQBgv8QBgv8AEAYL/EAYC/wBAGAv8AQBgAL/AAAQBgv8AEAYL/ABAGAAAAC/wBAGAAL/AAAAQBgL/EAYL/EAYAC/xAGC/wAQBgv8QBgL/AABAGC/wAAEAYL/AAAAEAYC/wAAQBgL/AQBr/AAEAYC/wAAEAYAAAv8AEAYL/EAYAC/xAGC/wAQBgL/AAEAa/wEAa/wEAYAAv8AEAYAC/xAGAAAL/AEAa/wAAQBgv8AEAYAC/xAGC/xAGAv8AAEAYL/AAAQBgv8QBgv8AQBr/AABAGC/wAAQBr/AAAAQBgv8QBgAL/EAYL/ABAGAAAL/EAYL/ABAGC/wBAGAAAC/wAAQBgL/AAAQBgv8AABAGC/wAAAEAa/wBAGAv8AAEAYAC/wBAGAL/AQBgL/AAAAEAYAAAAL/AABAGAv8QBgv8QBgv8AEAYL/AEAYAAv8QBgv8AQBr/AQBr/AAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" alt="郑州地铁微博二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁微博</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gold-2 bg-gold-3 py-20px">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px fs-3 c-white">Copyright 2010 郑州地铁集团有限公司 版权所有 All rights reserved.
+        豫ICP备13021555号</div>
+    </div>
+  </footer>
+  
+  <div class="float-tool hidden md:fc pf bottom-40px right-20px z-10 ae">
+    <button class="pr ct mt-3 w-90px h-80px" style="background: url(../static/png/elephant.png) center / contain no-repeat;">
+      <div class="pa right-full pr-10px">
+        <div class="p-20px bg-white rd-5px border border-gold-2">
+          <a class="fs-7 font-bold text-gold nowrap">“晶”彩服务</a>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-phone24h1 fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-20px bg-white rd-5px border border-gold-2">
+          <a class="fs-7 font-bold text-gold">55165516</a>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 ">
+      <div class="ic ic-weixin fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="../static/jpg/qr-weixin.jpg" alt="郑州地铁微信公众号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁微信公众号</p>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-weibo fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="data:image/jpeg;base64,/9j/4QDYRXhpZgAASUkqAAgAAAAIABIBAwABAAAAAQAAABoBBQABAAAAbgAAABsBBQABAAAAdgAAACgBAwABAAAAAgAAADEBAgAQAAAAfgAAADIBAgAUAAAAjgAAABMCAwABAAAAAQAAAGmHBAABAAAAogAAAAAAAABIAAAAAQAAAEgAAAABAAAAQUNEU2VlIL/sy9my6b+0ADIwMTY6MTI6MTQgMTA6MTQ6NTAAAwCQkgIABAAAADM0MAACoAQAAQAAABgBAAADoAQAAQAAABgBAAAAAAAAAAAAAP/AABEIARgBGAMBIQACEQEDEQH/2wCEAAIBAQEBAQIBAQECAgICAwUDAwICAwYEBAMFBwYHBwcGBwYICQsJCAgKCAYHCg0KCgsMDA0MBwkODw4MDwsMDAwBAwMDBAMECAQECBIMCgwSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv/EAEwAAQEBAAAAAAAAAAAAAAAAAAAKCRABAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A38AAAAAAAAAAAAAAAAAAAAAAAAQBgAAAAv8AEAYAC/xAGC/wAQBgv8QBgv8AEAYL/AEAYC/xAGAAAAC/wAQBgv8AAAAQBgv8QBgv8QBgv8QBgv8AAEAa/wAAAEAYL/EAYL/ABAGC/wAAABAGC/wAQBgv8QBgAL/EAYL/ABAGAAv8QBgL/AQBr/AAEAa/wEAYAv8AAEAYL/EAYAC/xAGC/wAAEAYL/EAYAC/xAGC/wBAGv8AQBgv8AEAYL/EAYL/EAYL/ABAGAAv8QBgv8QBgAL/EAYL/AAAQBgv8QBgAL/EAYL/ABAGC/wAQBgv8QBgL/AQBr/AAAAAEAYL/ABAGAAv8QBgv8AEAYL/AAAQBgv8AEAYL/AEAYC/xAGAv8BAGAL/AQBr/AAEAYC/xAGC/wAAEAYL/AAAQBgAAAAv8QBgv8QBgv8QBgv8AEAYL/EAYL/EAYL/EAYL/ABAGC/xAGC/xAGAAAAC/wAAAAAAEAYAAAv8AEAYC/wAAQBgv8AQBr/AQBr/AAAAAAAAAEAYAC/xAGC/xAGC/xAGC/wAQBgL/AAEAYC/xAGAAv8QBgAAAv8AQBgAL/AAAAQBr/AABAGC/wBAGv8AQBgv8QBgAL/AEAa/wEAa/wEAYC/wAAEAYL/ABAGC/xAGAAAL/ABAGC/xAGAv8BAGAL/AQBgAAv8AQBgAC/wAAAQBr/AABAGAv8BAGv8AAEAYAAv8AAEAYC/wABAGAAAAAv8AQBgC/wAAAEAYAC/xAGAAv8QBgL/AQBr/AEAYC/wABAGAL/AQBgL/AEAYC/wAAQBr/AAAAQBgv8AAEAa/wBAGAAv8AEAYAAAv8QBgAL/EAYC/wBAGC/wAAQBgL/EAYL/ABAGC/xAGC/wAAQBgL/AABAGAv8QBgL/AQBr/AQBgL/EAYL/AEAYAv8AQBgL/AABAGC/wAAAEAYC/xAGC/xAGC/wAAQBr/AAEAa/wEAYAAAL/EAYL/AABAGAAL/ABAGC/xAGAAv8QBgv8AEAYL/EAYL/AEAYC/wBAGAv8AEAYL/EAYL/EAYC/wEAYC/wAAQBgL/ABAGC/wAAAEAYAAv8QBgAL/AAAAABAGAAv8QBgv8AABAGC/wAAEAYL/AABAGAAL/AEAYC/wAQBgv8QBgv8AAEAYC/xAGC/xAGC/wAQBgL/AAAAAEAYL/ABAGC/xAGC/xAGC/wAQBgv8QBgL/AQBgAAAL/AAEAYAv8AAEAYC/wAAQBgAAAv8BAGv8BAGv8AQBgv8AAABAGAL/AQBgC/wEAa/wAAQBgAC/wABAGv8BAGv8BAGAAL/ABAGC/xAGC/xAGAv8AAEAYL/ABAGC/wAAQBgL/ABAGC/xAGC/wAQBgv8QBgv8QBgAL/EAYL/AABAGAv8AEAYL/EAYL/AABAGAAC/wAAQBgv8QBgv8AAAAAQBr/AEAYL/ABAGAAL/AAEAYC/wAAQBr/AQBgAC/wAAEAYL/AEAa/wBAGC/xAGC/wAQBgAL/EAYL/AEAYAAv8QBgv8AEAYAAAv8AQBgL/AAAAAAAQBgv8QBgv8AEAYL/EAYC/wBAGAv8AQBgAL/AAAQBgv8AEAYL/ABAGAAAAC/wBAGAAL/AAAAQBgL/EAYL/EAYAC/xAGC/wAQBgv8QBgL/AABAGC/wAAEAYL/AAAAEAYC/wAAQBgL/AQBr/AAEAYC/wAAEAYAAAv8AEAYL/EAYAC/xAGC/wAQBgL/AAEAa/wEAa/wEAYAAv8AEAYAC/xAGAAAL/AEAa/wAAQBgv8AEAYAC/xAGC/xAGAv8AAEAYL/AAAQBgv8QBgv8AQBr/AABAGC/wAAQBr/AAAAQBgv8QBgAL/EAYL/ABAGAAAL/EAYL/ABAGC/wBAGAAAC/wAAQBgL/AAAQBgv8AABAGC/wAAAEAa/wBAGAv8AAEAYAC/wBAGAL/AQBgL/AAAAEAYAAAAL/AABAGAv8QBgv8QBgv8AEAYL/AEAYAAv8QBgv8AQBr/AQBr/AAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" alt="郑州地铁新浪微博官方账号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁微博</p>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-douyin fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="../static/jpg/qr-weixin-1.jpg" alt="郑州地铁抖音官方账号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁抖音</p>
+        </div>
+      </div>
+    </button>
+    <button class="scroll-to-top-btn ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-fanhuidingbu fs-8 text-gold-3"></div>
+    </button>
+  </div>
+  
+  <script>
+    // 返回顶部
+    document.querySelector('.scroll-to-top-btn').addEventListener('click', e => {
+      window.scrollTo(0, 0);
+    });
+  </script>
+  
+  <!-- 公共 Footer 结束 -->
+
+</body>
+
+</html>

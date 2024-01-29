@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/css/swiper.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="../assets/iconfont/iconfont.css"> -->
+  <title>郑州地铁</title>
+  <script type="module" crossorigin src="./static/js/__uno.js"></script>
+  <link rel="stylesheet" crossorigin href="./static/css/__uno.css">
+</head>
+
+<style>
+  .swiper-banner .swiper-pagination-bullet{border-radius: 0;width: 20px;height:6px;transform: skewX(-20deg);background: white;opacity: 1;transition: all .3s;}
+  .swiper-banner .swiper-pagination-bullet-active{background: #BC251E;width: 30px;}
+  .tab.swiper-pagination-bullet-active{background: #BC251E;color:white!important;}
+  .tab.swiper-pagination-bullet-active::after{content: '';display:block;width:20px;height:40px;position:absolute;right:-10px;top: 0;transform:skewX(20deg);background: #BC251E;}
+</style>
+
+<body class="m0 font-hei text-dark">
+
+  <!-- 公共 Header 开始 -->
+  
+  <!-- 工具栏 -->
+  <div class="hidden md:block pf w-full top-0 left-0 z-12">
+    <div class="maxw-1540px px-20px lg:px-50px mx-a pr">
+      <div class="fr ac pa right-20px lg:right-50px top-0 h-36px box c-white">
+        <div class="pa w-1000px h-full bg-gold"></div>
+        <div class="pa w-20px h-full bg-gold -left-10px -skew-x-20"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-search mr-5px"></i>
+          <span class="line-height-5">搜索</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem px-15px a">
+          <i class="ic ic-shangcanfukan mr-5px"></i>
+          <span class="line-height-5">无障碍阅读</span>
+        </button>
+        <div class="pr h-3 w-1px bg-gold-1"></div>
+        <button class="pr ct h-full bg-transparent font-size-0.9rem pl-15px a">
+          <i class="ic ic-laoren mr-5px"></i>
+          <span class="line-height-5">适老模式</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <header class="header pf top-0 w-full h-80px md:h-100px z-11">
+    <div class="header-bg pa w-full h-full transition"></div>
+  
+    <nav class="header-ctn pa w-full h-80px md:h-100px oh">
+      <div class="pr h-80px md:h-100px maxw-1540px mx-auto fr ac pl-20px pr-20px lg:pl-50px lg:pr-50px">
+  
+        <!-- logo -->
+        <a class="pr block logo w-180px md:w-40px h-40px lg:h-60px lg:w-240px" href="/"></a>
+  
+        <!-- 移动端菜单按钮 -->
+        <div class="f1 md:hidden"></div>
+        <button class="menu-btn w-60px h-60px bg-transparent ic ic-menu font-size-30px md:hidden"></button>
+  
+        <!-- 导航菜单 -->
+        <ul class="nav-menu hidden md:fr f-1 pt-30px h-full je pb-20px fs-4 lg:font-size-1.1rem text-center">
+          <li class="px-7px">
+            <a href="/" class="block font-bold py-5">首页</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">企业介绍</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/about/index.html">企业概况</a></li>
+              <li class="py-10px"><a href="/about/organization.html">组织架构</a></li>
+              <li class="py-10px"><a href="/about/honers.html">企业荣誉</a></li>
+              <li class="py-10px"><a href="/about/laws.html">法律法规</a></li>
+              <li class="py-10px"><a href="/about/contact.html">联系我们</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="/news/index.html" class="block font-bold py-5">新闻资讯</a>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/culture/index.html">企业文化</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/culture/faith.html">企业理念</a></li>
+              <li class="py-10px"><a href="/culture/spiritual.html">精神文明建设</a></li>
+              <li class="py-10px"><a href="/culture/activities.html">文体活动</a></li>
+              <li class="py-10px"><a href="/culture/styles.html">员工风采</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/party/index.html">企业党建</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/party/organization.html">党组织架构</a></li>
+              <li class="py-10px"><a href="/party/news.html">党建动态</a></li>
+              <li class="py-10px"><a href="/party/integrity.html">廉洁从业</a></li>
+              <li class="py-10px"><a href="/party/">党史学习</a></li>
+            </ul>
+          <li class="px-7px"></li>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5">地铁运营</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="">二级内容</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/construction/index.html">工程建设</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/construction/index.html">总体规划</a></li>
+              <li class="py-10px"><a href="/construction/news.html">建设动态</a></li>
+              <li class="py-10px"><a href="/construction/">质量安全</a></li>
+              <li class="py-10px"><a href="/construction/">地铁保护</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/bidding/index.html">招标采购</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/bidding/bulletin.html">招标/比选公告</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">竞争性洽谈/比价公告</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">单一来源/直接委托公示</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">中标/中选公示</a></li>
+              <li class="py-10px"><a href="/bidding/bulletin.html">注意事项</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a class="block font-bold py-5" href="/jobs/index.html">人才招聘</a>
+            <ul class="font-size-0.95rem lg:fs-4">
+              <li class="py-10px"><a href="/jobs/index.html">招聘信息</a></li>
+              <li class="py-10px"><a href="/jobs/">应聘须知</a></li>
+            </ul>
+          </li>
+          <li class="px-7px">
+            <a href="/bulletin/" class="block font-bold py-5">企业公告</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <script>
+    var updateHeader = () => {
+      var header = document.querySelector('header');
+      if (window.scrollY > 100) header.classList.add("header-over");
+      else header.classList.remove("header-over");
+    };
+    window.addEventListener('scroll', updateHeader);
+    // 移动端菜单按钮
+    document.querySelector('.menu-btn').addEventListener('click', e => {
+      document.querySelector('.header').classList.toggle('open');
+    });
+    window.addEventListener('resize', e => {
+      if (window.screen.width >= 960) {
+        document.querySelector('.header').classList.remove('open');
+      }
+    });
+  </script>
+  
+  <!-- 公共 Header 结束 -->
+
+  <main class="overflow-x-hidden">
+    <section class="banner h-300px sm:h-400px md:h-600px bg-blue-1">
+      <img class="size-full object-cover" src="https://pic1.zhimg.com/v2-06b3899cc26192eea74343631f48a50c_b.webp?consumer=ZHI_MENG" alt="">
+    </section>
+
+    <section>
+      <div class="maxw-1540px mx-auto px-20px py-40px lg:px-50px oh">
+        <h1 class="text-fire fs-10 text-center m0">
+          <a href="">习近平向第六届中国国际进口博览会致信</a>
+        </h1>
+        <div class="fc ac mt-20px md:fr oh ct">
+          <a class="fr ac oh p-10px" href="">
+            <div class="bg-gold w-8 h-5 rd-1 mr-10px fs-3 font-bold text-white ct -skew-x-10">公告</div>
+            <span class="f1 oh ellipsis nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
+            <i class="ic ic-arrow-right fs-5 c-gold ml-10px"></i>
+          </a>
+          <a class="fr ac oh p-10px" href="">
+            <span class="f1 oh ellipsis nowrap maxw-360px">郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年郑州地铁诚邀全国城市轨道交通领域同仁参加“2023年</span>
+            <i class="ic ic-arrow-right fs-5 c-gold ml-10px"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="h-2px bg-gold-2 pr hidden md:block">
+        <div class="w-100px h-30px pa bottom-2px" style="background: url(data:image/png;base64,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);background-size: 100%;"></div>
+      </div>
+      <div class="maxw-1540px mx-auto px-20px pb-60px lg:px-50px">
+        <div class="fc md:fr">
+          <div class="py-30px md:pr-30px lg:pr-80px lg:py-40px f-6">
+            <div class="w-full pb-56% bg-gold-1 pr">
+              <div class="swiper-banner swiper-container pa! size-full">
+                <div class="swiper-wrapper">
+                  <a class="block swiper-slide pr" href="">
+                    <img class="size-full object-cover" src="https://p8.itc.cn/q_70/images03/20210907/89a051f852024481915f8b6f2be9f3f2.jpeg" alt="图片描述">
+                  </a>
+                  <a class="block swiper-slide pr" href="">
+                    <img class="size-full object-cover" src="https://5b0988e595225.cdn.sohucs.com/images/20200318/25fb53df599147d792f877183e1b4273.jpeg" alt="图片描述">
+                  </a>
+                  <a class="block swiper-slide pr" href="">
+                    <img class="size-full object-cover" src="https://p5.itc.cn/q_70/images03/20210108/3d2f6715b1524290925d9c0ae4436bcf.jpeg" alt="图片描述">
+                  </a>
+                </div>
+                <div class="swiper-pagination swiper-pagination-0 text-left pl-50px pb-10px"></div>
+              </div>
+              <div class="pa w-24px h-24px ct bg-gold right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </div>
+          </div>
+          <div class="pr w-2px bg-gold-2 hidden md:block">
+            <div class="dot pa -left-9px -top-11px"></div>
+          </div>
+          <article class="md:py-30px pb-30px md:pl-30px lg:py-60px lg:pl-60px f-2 fc as">
+            <h2 class="fs-5 m0">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民的感…</h2>
+            <time class="inline-block c-gold b-b-2 b-gold pb-5px mt-20px">2023-10-07</time>
+            <p class="font-size-0.95rem mt-20px line-height-6 f-1 oh">山河已秋万树黄，喜看稻菽千重浪。今天，满载着梦想与希冀的郑州市轨道交通10号线一期顺利实现初期运营。这条充满活力州市轨道交通10号线一期顺利实现初期运营。…</p>
+            <a class="fr ac px-12px py-7px bg-fire group" href="">
+              <span class="mr5px c-white">了解更多</span>
+              <i class="ic ic-arrow-right fs-6 c-white"></i>
+            </a>
+          </article>
+        </div>
+        <ul class="grid-gap-10px grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+            <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
+            <div class="b-l b-fire pl-10px">
+              <div class="fr ac">
+                <h3 class="f1 ellipsis oh nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
+              </div>
+              <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
+            </div>
+          </li>
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+            <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
+            <div class="b-l b-fire pl-10px">
+              <div class="fr ac">
+                <h3 class="f1 ellipsis oh nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
+              </div>
+              <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
+            </div>
+          </li>
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+            <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
+            <div class="b-l b-fire pl-10px">
+              <div class="fr ac">
+                <h3 class="f1 ellipsis oh nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
+              </div>
+              <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
+            </div>
+          </li>
+          <li class="w-full pr bg-gold-1 h:bg-gold-2 a px-20px py-15px transition">
+            <div class="pa w-13px h-13px right-0 top-0 bg-gold"></div>
+            <div class="b-l b-fire pl-10px">
+              <div class="fr ac">
+                <h3 class="f1 ellipsis oh nowrap m0 font-size-0.9rem">智慧橙线 开启新程 行稳 智慧橙线 开启新程 行稳</h3>
+                <time class="font-size-0.9rem ml-10px c-gold">10-07</time>
+              </div>
+              <p class="font-size-0.8rem m0 mt-8px">智慧橙线 开启新程 行稳致远 向美而行，致社会各界和广大市民…</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-gold-1 py-60px">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px">
+        <div class="sm:fr">
+          <div class="sm:f1 md:h:f-2 transition-flex">
+            <a class="block pr m0 h-240px sm:h-330px bg-gold-2" href="">
+              <img class="pa size-full object-cover" src="https://www.eastups.com/u/cms/www/201907/19172524amf7.jpg" alt="">
+              <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
+                <div class="fr ac">
+                  <div class="size-12px bg-gold rd-5px mr-10px"></div>
+                  <h3 class="f1 oh ellipsis nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                </div>
+                <p class="oh ellipsis nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+              </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </a>
+            <a class="py-20px fr ac group md:pl-20px h:c-fire" href="">
+              <div class="f-1">
+                <div class="font-bold font-size-1.1rem">工程建设</div>
+                <div class="fs-3 c-gold-3 mt-10px">ENGINEERING CONSTRUCTION</div>
+              </div>
+              <i class="ic ic-arrow-left fs-6 c-gold-3 -rotate-45 group-hover:rotate-0 transition"></i>
+            </a>
+          </div>
+          <div class="mt-20px sm:mt0 sm:ml-20px sm:f1 md:h:f-2 transition-flex">
+            <a class="block pr m0 h-240px sm:h-330px bg-gold-2" href="">
+              <img class="pa size-full object-cover" src="https://img1.baidu.com/it/u=1487591971,1256672737&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="">
+              <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
+                <div class="fr ac">
+                  <div class="size-12px bg-gold rd-5px mr-10px"></div>
+                  <h3 class="f1 oh ellipsis nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                </div>
+                <p class="oh ellipsis nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+              </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </a>
+            <a class="py-20px fr ac group h:c-fire" href="">
+              <div class="f-1">
+                <div class="font-bold font-size-1.1rem">地铁运营</div>
+                <div class="fs-3 c-gold-3 mt-10px">METRO OPERATION</div>
+              </div>
+              <i class="ic ic-arrow-left fs-6 c-gold-3 -rotate-45 group-hover:rotate-0 transition"></i>
+            </a>
+          </div>
+          <div class="mt-20px sm:mt0 sm:ml-20px sm:f1 md:h:f-2 transition-flex">
+            <a class="block pr m0 h-240px sm:h-330px bg-gold-2" href="">
+              <img class="pa size-full object-cover" src="https://img.zcool.cn/community/01287d5f49d42a11013e3187c76dbe.jpg@3000w_1l_0o_100sh.jpg" alt="">
+              <div class="p-20px pt-30px pa bottom-0 w-full bg-gradient-to-t from-black from-op-50 to-transparent c-white">
+                <div class="fr ac">
+                  <div class="size-12px bg-gold rd-5px mr-10px"></div>
+                  <h3 class="f1 oh ellipsis nowrap fs-4 m0">劳动创造幸福，实干成就梦想 —劳动创造幸福，实干成就梦想 —…</h3>
+                </div>
+                <p class="oh ellipsis nowrap font-size-0.9rem mt10px mb0">在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑在双节假期即将来临之际，郑州地铁10号线迎来了开通时刻。9月28日，郑…</p>
+              </div>
+              <div class="pa w-24px h-24px ct bg-fire right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </a>
+            <a class="py-20px fr ac group h:c-fire" href="">
+              <div class="f-1">
+                <div class="font-bold font-size-1.1rem">资源经营</div>
+                <div class="fs-3 c-gold-3 mt-10px">RESOURCE MANAGEMENT</div>
+              </div>
+              <i class="ic ic-arrow-left fs-6 c-gold-3 -rotate-45 group-hover:rotate-0 transition"></i>
+            </a>
+          </div>
+        </div>
+        <div class="pr h-2px bg-gold-2 hidden md:block">
+          <div class="pa w-2px bg-gold-2 h-268px -top-88px"></div>
+          <div class="dot pa -left-9px -top-9px"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-78px pb-30px">
+      <div class="md:fr maxw-1540px mx-auto px-20px lg:px-50px">
+        <div class="swiper-container swiper-tab f3 oh md:mr-50px font-size-0.9rem">
+          <div class="pa w-24px h-24px ct bg-gold right-0 top-16px z-2 ic ic-jiantouyou fs-3 c-white z-2"></div>
+          <div class="hidden sm:block pa w-80px h-22px top-18px right-50px" style="background: url(data:image/png;base64,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);background-size: 100%;"></div>
+          <div class="swiper-pagination swiper-pagination-1 pr bottom-a! text-left! b-b-2 b-gold-2"></div>
+          <div class="swiper-wrapper">
+            <ul class="swiper-slide py-20px sm:grid sm:grid-cols-2">
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+            </ul>
+            <ul class="swiper-slide py-20px sm:grid sm:grid-cols-2">
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+              <li class="w-full py-5px fr ac oh pr-10px">
+                <div class="h-8px w-8px rd-8px bg-gold mr-5px"></div>
+                <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sm:f2">
+          <div class="pb-56% bg-gold-1 pr">
+            <video class="pa size-full" controls
+              src="//samplelib.com/lib/preview/mp4/sample-5s.mp4"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="maxw-1540px px-20px lg:px-50px md:fr mx-a py-40px">
+        <div class="md:f-10">
+          <div class="sm:fr">
+            <div class="f-4 pr h-200px sm:h-300px md:h-430px">
+              <div class="size-full md:w-140% bg-gold-1 md:pa md:right-0 pr">
+                <img class="pa size-full object-cover" src="https://img1.baidu.com/it/u=3468823948,1380852864&fm=253&fmt=auto?w=989&h=800" alt="">
+                <div class="pa w-24px h-24px ct bg-gold right-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+              </div>
+            </div>
+            <a class="f-2 bg-fire c-white p-30px fc h:c-white group" href="">
+              <div class="fr as">
+                <div class="hidden sm:block dot mt-3px mr-10px"></div>
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">企业文化</h2>
+                  <div class="fs-3 mt-10px c-white c-op-50">CORPORATE CULTURE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 fs-6 "></div>
+              </div>
+              <div class="f1 fc jc">
+                <div class="hidden sm:block h-1px w-8 bg-white"></div>
+                <p class="fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+            </a>
+          </div>
+          <div class="sm:fr pr">
+            <a class="pr f1 fc p-30px md:b-l-2 b-gold-2" href="">
+              <div class="fr as">
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">招标采购</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+              <div class="hidden md:block dot pa -left-9px -bottom-9px z-2"></div>
+            </a>
+            <a class="pr f1 fc p-30px md:b-l-2 b-gold-2" href="">
+              <div class="fr as">
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">人才招聘</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+              <div class="hidden md:block dot pa -left-9px -bottom-9px z-2"></div>
+            </a>
+            <div class="hidden md:block h-2px w-2000px pa bottom-0 right-0 bg-gold-2"></div>
+          </div>
+        </div>
+        <div class="md:f-4 sm:fr flex flex-col-reverse md:block md:fc">
+          <div class="h-40px box hidden md:block"></div>
+          <div class="sm:f-2 md:f-1 pr h-142px sm:h-auto">
+            <div class="pa size-full md:w-160% bg-gold-1"></div>
+              <a class="pa size-full fc p-30px md:pr-0" href="">
+              <div class="hidden md:block h-2px pa left-0 top-0 w-2000px bg-gold-2"></div>
+              <div class="fr as">
+                <div class="hidden md:block dot mt-3px mr-10px"></div>
+                <div class="f1">
+                  <h2 class="m0 fs-5 font-bold">员工风采</h2>
+                  <div class="fs-3 mt-10px c-gold">STAFF STYLE</div>
+                </div>
+                <div class="ic ic-changyongtubiao-fuben-16 c-gold fs-6"></div>
+              </div>
+              <div class="f1 fc jc">
+                <p class="mb0 fs-3">郑州机场至许昌市域铁路工程（郑州段）环境影响报告书…</p>
+              </div>
+            </a>
+          </div>
+          <div class="sm:f-4 md:f-3 md:h-full pr minh-200px sm:minh-300px">
+            <div class="pa size-full md:w-160% bg-gold-2  left-1px">
+              <img class="pa size-full object-cover" src="https://img2.baidu.com/it/u=2870923410,1099149533&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=375" alt="" >
+              <div class="pa w-24px h-24px ct bg-gold left-0 bottom-0 z-2 ic ic-jiantouyou fs-3 c-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px pt-40px md:flex md:flex-row-reverse">
+        <div class="bg-gold-3 md:w-300px fr ac md:fc jc p-20px sticky top-0 md:pr md:top-auto">
+          <h2 class="hidden md:block fs-5 mt-0">乘车查询</h2>
+          <div class="hidden md:block fs-3 mb-40px">Bus inquiry</div>
+          <label class="f1 oh md:f0 md:w-full fr ac px-10px bg-white minh-50px rd-rt-20px">
+            <i class="ic ic-start fs-6 md:fs-7 c-blue hidden sm:block"></i>
+            <select class="f1 bg-transparent fs-4 h-full">
+              <option value="">请选择起点</option>
+              <option value="">河南工业大学</option>
+            </select>
+          </label>
+          <i class="ic ic-paixu c-white m-10px md-fs-6 md:rotate-90 md:m-20px"></i>
+          <label class="f1 oh md:f0 md:w-full fr ac px-10px bg-white minh-50px rd-rt-20px">
+            <i class="ic ic-end fs-6 md:fs-7 c-fire hidden sm:block"></i>
+            <select class="f1 bg-transparent fs-4 h-full">
+              <option value="">请选择终点</option>
+              <option value="">河南工业大学</option>
+            </select>
+          </label>
+          <button class="a nowrap fs-4 h-50px bg-white ml-10px ct md:mt-50px md:ml-0 md:w-full h:c-fire">
+            <div class="ic ic-search fs-5 mr-4px c-fire"></div>
+            <span>查询</span>
+          </button>
+        </div>
+        <div class="fn-btns bg-gold-1 p-20px fr flex-wrap justify-around md:fc">
+          <a class="fc ac jc" href="">
+            <i class="ic ic-map font-size-30px p-10px b b-gold rd-50% c-gold"></i>
+            <div class="fs-3 mt-10px">站点查询</div>
+          </a>
+          <a class="fc ac jc" href="">
+            <i class="ic ic-time font-size-30px p-10px b b-gold rd-50% c-gold"></i>
+            <div class="fs-3 mt-10px">运营时间</div>
+          </a>
+          <a class="fc ac jc" href="">
+            <i class="ic ic-shiwu font-size-30px p-10px b b-gold rd-50% c-gold"></i>
+            <div class="fs-3 mt-10px">失物招领</div>
+          </a>
+          <a class="fc ac jc" href="">
+            <i class="ic ic-talk font-size-30px p-10px b b-gold rd-50% c-gold"></i>
+            <div class="fs-3 mt-10px">互动交流</div>
+          </a>
+          <a class="fc ac jc" href="">
+            <i class="ic ic-more font-size-30px p-10px b b-gold rd-50% c-gold"></i>
+            <div class="fs-3 mt-10px">更多</div>
+          </a>
+        </div>
+        <div class="pr hidden md:block">
+          <button class="pa w-20px h-60px ct bg-fire right-0 top-260px a rd-l-5px"
+            onclick="document.querySelector('.fn-btns').classList.toggle('hidden!');this.querySelector('.ic').classList.toggle('rotate-180');">
+            <i class="ic ic-jiantouyou c-white"></i>
+          </button>
+        </div>
+        <div class="f1 h-580px b b-gold-1 b-r-0 b-b-0">
+          <img src="https://ditiemap.com/zb_users/upload/ditie/201901071546851004337898.jpg" alt="" class="size-full object-contain">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 公共 Footer 开始 -->
+  
+  <footer class="footer">
+    <div class="py-20px bg-gold-1">
+      <dl class="maxw-1540px mx-auto px-20px lg:px-50px ct flex-wrap">
+        <dt class="font-size-1.1rem mr-20px hidden md:block">友情连接</dt>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link05.png" alt="南京地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link01.png" alt="北京地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link02.png" alt="上海地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link03.png" alt="广州地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link04.png" alt="深圳地铁Logo"></a>
+        </dd>
+        <dd class="m-10px">
+          <a href=""><img class="w-140px h-60px object-contain" src="./static/png/link06.png" alt="香港地铁Logo"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="bg-gold-3 border-t-10px border-fire">
+      <div class="py-30px maxw-1540px mx-auto px-20px lg:px-50px pr md:minh-180px">
+        <ul class="fr flex-wrap c-white fs-3">
+          <li class="mr-40px my-5px"><a href="">公司介绍</a></li>
+          <li class="mr-40px my-5px"><a href="">新闻资讯</a></li>
+          <li class="mr-40px my-5px"><a href="">企业文化</a></li>
+          <li class="mr-40px my-5px"><a href="">企业党建</a></li>
+          <li class="mr-40px my-5px"><a href="">地铁运营</a></li>
+          <li class="mr-40px my-5px"><a href="">工程建设</a></li>
+          <li class="mr-40px my-5px"><a href="">招标采购</a></li>
+          <li class="mr-40px my-5px"><a href="">人才招聘</a></li>
+          <li class="mr-40px my-5px"><a href="">企业公告</a></li>
+        </ul>
+        <i
+          class="hidden md:block ic pa right-10px lg:right-50px top-20px ic-changyongtubiao-fuben-16 c-gold-2 font-size-40px"></i>
+        <div class="hidden md:block pa w-170px h-48px bottom-0"  style="background: url(data:image/png;base64,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);background-size: 100%;"></div>
+        <div class="hidden md:block pa w-190px h-110px bottom-0 right-300px" style="background: url(./static/png/city.png);background-size: 100%;"></div>
+        <div class="hidden md:block pa w-140px h-37px bottom-20% right-20px lg:right-50px">
+          <img src="./static/png/logo-0.png" class="size-full" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white bg-gold-3 border-op-40">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px c-white fc lg:fr">
+        <div class="md:fr">
+          <div class="f1 md:border-r border-gold-2 md:py-20px pr-22px pr">
+            <h3 class="font-size-0.95rem">公司地址：</h3>
+            <p class="fs-3">郑州市郑东新区康宁街100号</p>
+            <p class="fs-3">邮编：450000</p>
+            <p class="font-size-0.7rem">100 Kangning Street, Zhengdong New District, Zhengzhou City</p>
+            <div class="hidden md:block dot pa -right-10px -top-10px"></div>
+          </div>
+          <div class="f1 md:border-r border-gold-2 md:py-20px md:px-22px pr">
+            <h3 class="font-size-0.95rem">联系方式：</h3>
+            <p class="fs-3">乘客服务热线：0371-55166166（每天8:30-20:00）</p>
+            <p class="fs-3">传真：0371-55165516/55166617（工作日9:00—17:00）</p>
+            <p class="fs-3">24小时应急值班电话：0371-55165516</p>
+            <div class="hidden md:block dot pa -right-10px -top-10px"></div>
+          </div>
+          <div class="f1 md:py-20px md:px-22px pr">
+            <h3 class="font-size-0.95rem">电子邮箱：</h3>
+            <p class="fs-3">zzmetro@zzmetro.cn</p>
+          </div>
+        </div>
+        <div class="f1 xs:fr">
+          <div class="f1 lg:pl-20px pr-20px py-20px">
+            <img class="w-full" src="./static/jpg/qr-weixin.jpg" alt="郑州地铁微信公众号二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁微信</div>
+          </div>
+          <div class="f1 pr-20px py-20px">
+            <img class="w-full" src="./static/jpg/qr-weixin-1.jpg" alt="郑州地铁资讯微信二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁资讯微信</div>
+          </div>
+          <div class="f1 py-20px">
+            <img class="w-full" src="data:image/jpeg;base64,/9j/4QDYRXhpZgAASUkqAAgAAAAIABIBAwABAAAAAQAAABoBBQABAAAAbgAAABsBBQABAAAAdgAAACgBAwABAAAAAgAAADEBAgAQAAAAfgAAADIBAgAUAAAAjgAAABMCAwABAAAAAQAAAGmHBAABAAAAogAAAAAAAABIAAAAAQAAAEgAAAABAAAAQUNEU2VlIL/sy9my6b+0ADIwMTY6MTI6MTQgMTA6MTQ6NTAAAwCQkgIABAAAADM0MAACoAQAAQAAABgBAAADoAQAAQAAABgBAAAAAAAAAAAAAP/AABEIARgBGAMBIQACEQEDEQH/2wCEAAIBAQEBAQIBAQECAgICAwUDAwICAwYEBAMFBwYHBwcGBwYICQsJCAgKCAYHCg0KCgsMDA0MBwkODw4MDwsMDAwBAwMDBAMECAQECBIMCgwSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv/EAEwAAQEBAAAAAAAAAAAAAAAAAAAKCRABAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A38AAAAAAAAAAAAAAAAAAAAAAAAQBgAAAAv8AEAYAC/xAGC/wAQBgv8QBgv8AEAYL/AEAYC/xAGAAAAC/wAQBgv8AAAAQBgv8QBgv8QBgv8QBgv8AAEAa/wAAAEAYL/EAYL/ABAGC/wAAABAGC/wAQBgv8QBgAL/EAYL/ABAGAAv8QBgL/AQBr/AAEAa/wEAYAv8AAEAYL/EAYAC/xAGC/wAAEAYL/EAYAC/xAGC/wBAGv8AQBgv8AEAYL/EAYL/EAYL/ABAGAAv8QBgv8QBgAL/EAYL/AAAQBgv8QBgAL/EAYL/ABAGC/wAQBgv8QBgL/AQBr/AAAAAEAYL/ABAGAAv8QBgv8AEAYL/AAAQBgv8AEAYL/AEAYC/xAGAv8BAGAL/AQBr/AAEAYC/xAGC/wAAEAYL/AAAQBgAAAAv8QBgv8QBgv8QBgv8AEAYL/EAYL/EAYL/EAYL/ABAGC/xAGC/xAGAAAAC/wAAAAAAEAYAAAv8AEAYC/wAAQBgv8AQBr/AQBr/AAAAAAAAAEAYAC/xAGC/xAGC/xAGC/wAQBgL/AAEAYC/xAGAAv8QBgAAAv8AQBgAL/AAAAQBr/AABAGC/wBAGv8AQBgv8QBgAL/AEAa/wEAa/wEAYC/wAAEAYL/ABAGC/xAGAAAL/ABAGC/xAGAv8BAGAL/AQBgAAv8AQBgAC/wAAAQBr/AABAGAv8BAGv8AAEAYAAv8AAEAYC/wABAGAAAAAv8AQBgC/wAAAEAYAC/xAGAAv8QBgL/AQBr/AEAYC/wABAGAL/AQBgL/AEAYC/wAAQBr/AAAAQBgv8AAEAa/wBAGAAv8AEAYAAAv8QBgAL/EAYC/wBAGC/wAAQBgL/EAYL/ABAGC/xAGC/wAAQBgL/AABAGAv8QBgL/AQBr/AQBgL/EAYL/AEAYAv8AQBgL/AABAGC/wAAAEAYC/xAGC/xAGC/wAAQBr/AAEAa/wEAYAAAL/EAYL/AABAGAAL/ABAGC/xAGAAv8QBgv8AEAYL/EAYL/AEAYC/wBAGAv8AEAYL/EAYL/EAYC/wEAYC/wAAQBgL/ABAGC/wAAAEAYAAv8QBgAL/AAAAABAGAAv8QBgv8AABAGC/wAAEAYL/AABAGAAL/AEAYC/wAQBgv8QBgv8AAEAYC/xAGC/xAGC/wAQBgL/AAAAAEAYL/ABAGC/xAGC/xAGC/wAQBgv8QBgL/AQBgAAAL/AAEAYAv8AAEAYC/wAAQBgAAAv8BAGv8BAGv8AQBgv8AAABAGAL/AQBgC/wEAa/wAAQBgAC/wABAGv8BAGv8BAGAAL/ABAGC/xAGC/xAGAv8AAEAYL/ABAGC/wAAQBgL/ABAGC/xAGC/wAQBgv8QBgv8QBgAL/EAYL/AABAGAv8AEAYL/EAYL/AABAGAAC/wAAQBgv8QBgv8AAAAAQBr/AEAYL/ABAGAAL/AAEAYC/wAAQBr/AQBgAC/wAAEAYL/AEAa/wBAGC/xAGC/wAQBgAL/EAYL/AEAYAAv8QBgv8AEAYAAAv8AQBgL/AAAAAAAQBgv8QBgv8AEAYL/EAYC/wBAGAv8AQBgAL/AAAQBgv8AEAYL/ABAGAAAAC/wBAGAAL/AAAAQBgL/EAYL/EAYAC/xAGC/wAQBgv8QBgL/AABAGC/wAAEAYL/AAAAEAYC/wAAQBgL/AQBr/AAEAYC/wAAEAYAAAv8AEAYL/EAYAC/xAGC/wAQBgL/AAEAa/wEAa/wEAYAAv8AEAYAC/xAGAAAL/AEAa/wAAQBgv8AEAYAC/xAGC/xAGAv8AAEAYL/AAAQBgv8QBgv8AQBr/AABAGC/wAAQBr/AAAAQBgv8QBgAL/EAYL/ABAGAAAL/EAYL/ABAGC/wBAGAAAC/wAAQBgL/AAAQBgv8AABAGC/wAAAEAa/wBAGAv8AAEAYAC/wBAGAL/AQBgL/AAAAEAYAAAAL/AABAGAv8QBgv8QBgv8AEAYL/AEAYAAv8QBgv8AQBr/AQBr/AAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" alt="郑州地铁微博二维码">
+            <div class="fs-3 text-center mt-10px">郑州地铁微博</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gold-2 bg-gold-3 py-20px">
+      <div class="maxw-1540px mx-auto px-20px lg:px-50px fs-3 c-white">Copyright 2010 郑州地铁集团有限公司 版权所有 All rights reserved.
+        豫ICP备13021555号</div>
+    </div>
+  </footer>
+  
+  <div class="float-tool hidden md:fc pf bottom-40px right-20px z-10 ae">
+    <button class="pr ct mt-3 w-90px h-80px" style="background: url(../assets/imgs/elephant.png) center / contain no-repeat;">
+      <div class="pa right-full pr-10px">
+        <div class="p-20px bg-white rd-5px border border-gold-2">
+          <a class="fs-7 font-bold text-gold nowrap">“晶”彩服务</a>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-phone24h1 fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-20px bg-white rd-5px border border-gold-2">
+          <a class="fs-7 font-bold text-gold">55165516</a>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 ">
+      <div class="ic ic-weixin fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="./static/jpg/qr-weixin.jpg" alt="郑州地铁微信公众号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁微信公众号</p>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-weibo fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="data:image/jpeg;base64,/9j/4QDYRXhpZgAASUkqAAgAAAAIABIBAwABAAAAAQAAABoBBQABAAAAbgAAABsBBQABAAAAdgAAACgBAwABAAAAAgAAADEBAgAQAAAAfgAAADIBAgAUAAAAjgAAABMCAwABAAAAAQAAAGmHBAABAAAAogAAAAAAAABIAAAAAQAAAEgAAAABAAAAQUNEU2VlIL/sy9my6b+0ADIwMTY6MTI6MTQgMTA6MTQ6NTAAAwCQkgIABAAAADM0MAACoAQAAQAAABgBAAADoAQAAQAAABgBAAAAAAAAAAAAAP/AABEIARgBGAMBIQACEQEDEQH/2wCEAAIBAQEBAQIBAQECAgICAwUDAwICAwYEBAMFBwYHBwcGBwYICQsJCAgKCAYHCg0KCgsMDA0MBwkODw4MDwsMDAwBAwMDBAMECAQECBIMCgwSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv/EAEwAAQEBAAAAAAAAAAAAAAAAAAAKCRABAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A38AAAAAAAAAAAAAAAAAAAAAAAAQBgAAAAv8AEAYAC/xAGC/wAQBgv8QBgv8AEAYL/AEAYC/xAGAAAAC/wAQBgv8AAAAQBgv8QBgv8QBgv8QBgv8AAEAa/wAAAEAYL/EAYL/ABAGC/wAAABAGC/wAQBgv8QBgAL/EAYL/ABAGAAv8QBgL/AQBr/AAEAa/wEAYAv8AAEAYL/EAYAC/xAGC/wAAEAYL/EAYAC/xAGC/wBAGv8AQBgv8AEAYL/EAYL/EAYL/ABAGAAv8QBgv8QBgAL/EAYL/AAAQBgv8QBgAL/EAYL/ABAGC/wAQBgv8QBgL/AQBr/AAAAAEAYL/ABAGAAv8QBgv8AEAYL/AAAQBgv8AEAYL/AEAYC/xAGAv8BAGAL/AQBr/AAEAYC/xAGC/wAAEAYL/AAAQBgAAAAv8QBgv8QBgv8QBgv8AEAYL/EAYL/EAYL/EAYL/ABAGC/xAGC/xAGAAAAC/wAAAAAAEAYAAAv8AEAYC/wAAQBgv8AQBr/AQBr/AAAAAAAAAEAYAC/xAGC/xAGC/xAGC/wAQBgL/AAEAYC/xAGAAv8QBgAAAv8AQBgAL/AAAAQBr/AABAGC/wBAGv8AQBgv8QBgAL/AEAa/wEAa/wEAYC/wAAEAYL/ABAGC/xAGAAAL/ABAGC/xAGAv8BAGAL/AQBgAAv8AQBgAC/wAAAQBr/AABAGAv8BAGv8AAEAYAAv8AAEAYC/wABAGAAAAAv8AQBgC/wAAAEAYAC/xAGAAv8QBgL/AQBr/AEAYC/wABAGAL/AQBgL/AEAYC/wAAQBr/AAAAQBgv8AAEAa/wBAGAAv8AEAYAAAv8QBgAL/EAYC/wBAGC/wAAQBgL/EAYL/ABAGC/xAGC/wAAQBgL/AABAGAv8QBgL/AQBr/AQBgL/EAYL/AEAYAv8AQBgL/AABAGC/wAAAEAYC/xAGC/xAGC/wAAQBr/AAEAa/wEAYAAAL/EAYL/AABAGAAL/ABAGC/xAGAAv8QBgv8AEAYL/EAYL/AEAYC/wBAGAv8AEAYL/EAYL/EAYC/wEAYC/wAAQBgL/ABAGC/wAAAEAYAAv8QBgAL/AAAAABAGAAv8QBgv8AABAGC/wAAEAYL/AABAGAAL/AEAYC/wAQBgv8QBgv8AAEAYC/xAGC/xAGC/wAQBgL/AAAAAEAYL/ABAGC/xAGC/xAGC/wAQBgv8QBgL/AQBgAAAL/AAEAYAv8AAEAYC/wAAQBgAAAv8BAGv8BAGv8AQBgv8AAABAGAL/AQBgC/wEAa/wAAQBgAC/wABAGv8BAGv8BAGAAL/ABAGC/xAGC/xAGAv8AAEAYL/ABAGC/wAAQBgL/ABAGC/xAGC/wAQBgv8QBgv8QBgAL/EAYL/AABAGAv8AEAYL/EAYL/AABAGAAC/wAAQBgv8QBgv8AAAAAQBr/AEAYL/ABAGAAL/AAEAYC/wAAQBr/AQBgAC/wAAEAYL/AEAa/wBAGC/xAGC/wAQBgAL/EAYL/AEAYAAv8QBgv8AEAYAAAv8AQBgL/AAAAAAAQBgv8QBgv8AEAYL/EAYC/wBAGAv8AQBgAL/AAAQBgv8AEAYL/ABAGAAAAC/wBAGAAL/AAAAQBgL/EAYL/EAYAC/xAGC/wAQBgv8QBgL/AABAGC/wAAEAYL/AAAAEAYC/wAAQBgL/AQBr/AAEAYC/wAAEAYAAAv8AEAYL/EAYAC/xAGC/wAQBgL/AAEAa/wEAa/wEAYAAv8AEAYAC/xAGAAAL/AEAa/wAAQBgv8AEAYAC/xAGC/xAGAv8AAEAYL/AAAQBgv8QBgv8AQBr/AABAGC/wAAQBr/AAAAQBgv8QBgAL/EAYL/ABAGAAAL/EAYL/ABAGC/wBAGAAAC/wAAQBgL/AAAQBgv8AABAGC/wAAAEAa/wBAGAv8AAEAYAC/wBAGAL/AQBgL/AAAAEAYAAAAL/AABAGAv8QBgv8QBgv8AEAYL/AEAYAAv8QBgv8AQBr/AQBr/AAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=" alt="郑州地铁新浪微博官方账号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁微博</p>
+        </div>
+      </div>
+    </button>
+    <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-douyin fs-8 text-gold-3"></div>
+      <div class="pa right-full pr-10px">
+        <div class="p-15px bg-white rd-5px border border-gold-2">
+          <div class="w-110px h-110px bg-gold-2">
+            <img class="w-full h-full" src="./static/jpg/qr-weixin-1.jpg" alt="郑州地铁抖音官方账号二维码">
+          </div>
+          <p class="mt-10px mb-0 fs-3">郑州地铁抖音</p>
+        </div>
+      </div>
+    </button>
+    <button class="scroll-to-top-btn ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+      <div class="ic ic-fanhuidingbu fs-8 text-gold-3"></div>
+    </button>
+  </div>
+  
+  <script>
+    // 返回顶部
+    document.querySelector('.scroll-to-top-btn').addEventListener('click', e => {
+      window.scrollTo(0, 0);
+    });
+  </script>
+  
+  <!-- 公共 Footer 结束 -->
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.0.0/js/swiper.min.js"></script>
+
+  <script>
+    function init() {
+      var swiperBanner = new Swiper('.swiper-banner', {
+        loop: true,
+        autoplay: {},
+        pagination: {
+          el: '.swiper-pagination-0',
+          clickable: true,
+        },
+      });
+
+      var tabNames = ['党建动态', '党史学习教育'];
+      var swiperTab = new Swiper('.swiper-tab', {
+        autoHeight: true,
+        allowTouchMove: false,
+        pagination: {
+          el: '.swiper-pagination-1',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<button class="tab pr h-40px ml-0! px-22px! w-a! rd-0 fs-4 bg-transparent font-bold a c-dark! op-100 mr-20px! ${className}">${tabNames[index]}</button>`;
+          },
+        },
+      }); 
+    }
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+
+</html>
