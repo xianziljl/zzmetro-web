@@ -7,7 +7,8 @@
 </head>
 
 <style>
-  .swiper-banner .swiper-pagination-bullet {
+  .swiper-banner .swiper-pagination-bullet,
+  .swiper-party .swiper-pagination-bullet {
     border-radius: 0;
     width: 20px;
     height: 6px;
@@ -17,7 +18,8 @@
     transition: all .3s;
   }
 
-  .swiper-banner .swiper-pagination-bullet-active {
+  .swiper-banner .swiper-pagination-bullet-active,
+  .swiper-party .swiper-pagination-bullet-active {
     background: #BC251E;
     width: 30px;
   }
@@ -61,6 +63,7 @@
     transform: skewX(20deg);
     background: #BC251E;
   }
+
 </style>
 
 <body class="m0 font-hei text-dark">
@@ -295,8 +298,40 @@
                 <a class="f1 ellipsis" href="">公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”公司党委开展“新时代国企改革的使命任务”</a>
               </li>
             </ul>
-            <div class="swiper-slide py-20px sm:grid sm:grid-cols-2">
-              hello
+            <div class="swiper-slide py-20px sm:fr">
+              <div class="swiper-party f3 h-190px swiper-container bg-gold-1">
+                <div class="swiper-wrapper">
+                  <div class="h-full! swiper-slide">
+                    <img class="size-full object-cover" src="https://img2.baidu.com/it/u=4081112715,1031968167&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt="">
+                  </div>
+                  <div class="h-full! swiper-slide">
+                    <img class="size-full object-cover" src="https://img2.baidu.com/it/u=4081112715,1031968167&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt="">
+                  </div>
+                  <div class="h-full! swiper-slide">
+                    <img class="size-full object-cover" src="https://img2.baidu.com/it/u=4081112715,1031968167&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt="">
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-0 text-right pr-20px pb-10px"></div>
+              </div>
+              <div class="f4 sm:pl-20px pt-30px">
+                <ul class="swiper-party-detail">
+                  <li>
+                    <div class="w-40px h-2px bg-fire"></div>
+                    <a class="block h:underline mt-15px" href="">百炼成钢 百年辉煌 ——郑州地铁推出庆祝中国共产党建党100周年珍藏纪念票000</a>
+                    <p class="fs-3">百年光辉历程，百年丰功伟绩，2021年是中国共产党成立100周年。在一百年的非凡奋斗历程中，一代又一代中国共产党人顽强拼搏、不懈奋斗，涌现了一大批视死如归的革命烈士、一大批顽强奋斗的英雄人物、…</p>
+                  </li>
+                  <li>
+                    <div class="w-40px h-2px bg-fire"></div>
+                    <a class="block h:underline mt-15px" href="">百炼成钢 百年辉煌 ——郑州地铁推出庆祝中国共产党建党100周年珍藏纪念票111</a>
+                    <p class="fs-3">百年光辉历程，百年丰功伟绩，2021年是中国共产党成立100周年。在一百年的非凡奋斗历程中，一代又一代中国共产党人顽强拼搏、不懈奋斗，涌现了一大批视死如归的革命烈士、一大批顽强奋斗的英雄人物、…</p>
+                  </li>
+                  <li>
+                    <div class="w-40px h-2px bg-fire"></div>
+                    <a class="block h:underline mt-15px" href="">百炼成钢 百年辉煌 ——郑州地铁推出庆祝中国共产党建党100周年珍藏纪念票222</a>
+                    <p class="fs-3">百年光辉历程，百年丰功伟绩，2021年是中国共产党成立100周年。在一百年的非凡奋斗历程中，一代又一代中国共产党人顽强拼搏、不懈奋斗，涌现了一大批视死如归的革命烈士、一大批顽强奋斗的英雄人物、…</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -465,6 +500,7 @@
 
   <script>
     function init() {
+      // 首页新闻banner
       new Swiper('.swiper-banner', {
         loop: true,
         autoplay: {},
@@ -474,6 +510,7 @@
         },
       });
 
+      // 党建动态 + 党史学习教育
       new Swiper('.swiper-tab', {
         autoHeight: true,
         allowTouchMove: false,
@@ -482,6 +519,28 @@
           clickable: true,
           renderBullet: function (index, className) {
             return `<button class="tab pr h-40px ml-0! px-22px! w-a! rd-0 fs-4 bg-transparent font-bold a c-dark! op-100 mr-20px! ${className}">${['党建动态', '党史学习教育'][index]}</button>`;
+          },
+        },
+      });
+
+      // 党史学习教育
+      var list = document.querySelectorAll('.swiper-party-detail li');
+      list.forEach((item, i) => {
+        if (i != 0) item.classList.add('hidden!');
+      });
+      new Swiper('.swiper-party', {
+        loop: false,
+        autoplay: {},
+        pagination: {
+          el: '.swiper-pagination-0',
+          clickable: true,
+        },
+        on:{
+          slideChange: function(){
+            list.forEach((item, i) => {
+              if (i === this.activeIndex) item.classList.remove('hidden!');
+              else item.classList.add('hidden!');
+            });
           },
         },
       });
