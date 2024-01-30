@@ -36,7 +36,7 @@ export default {
         assetFileNames: "static/[ext]/[name].[ext]",
       },
     },
-    outDir: '../dist',
+    outDir: '../docs',
     emptyOutDir: true,
   }
 };
