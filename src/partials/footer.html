@@ -2,7 +2,7 @@
 
 <footer class="footer">
   <div class="py-20px bg-gold-1">
-    <dl class="maxw-1540px mx-auto px-20px lg:px-50px ct flex-wrap">
+    <dl class="maxw-1366px xl:maxw-1540px mx-auto px-20px lg:px-50px ct flex-wrap">
       <dt class="font-size-1.1rem mr-20px hidden md:block">友情连接</dt>
       <dd class="m-10px">
         <a href=""><img class="w-140px h-60px object-contain" src="/assets/imgs/link05.png" alt="南京地铁Logo"></a>
@@ -25,7 +25,7 @@
     </dl>
   </div>
   <div class="bg-gold-3 border-t-10px border-fire">
-    <div class="py-30px maxw-1540px mx-auto px-20px lg:px-50px pr md:minh-180px">
+    <div class="py-30px maxw-1366px xl:maxw-1540px mx-auto px-20px lg:px-50px pr md:minh-180px">
       <ul class="fr flex-wrap c-white fs-3">
         <li class="mr-40px my-5px"><a href="">公司介绍</a></li>
         <li class="mr-40px my-5px"><a href="">新闻资讯</a></li>
@@ -47,7 +47,7 @@
     </div>
   </div>
   <div class="border-t border-white bg-gold-3 border-op-40">
-    <div class="maxw-1540px mx-auto px-20px lg:px-50px c-white fc lg:fr">
+    <div class="maxw-1366px xl:maxw-1540px mx-auto px-20px lg:px-50px c-white fc lg:fr">
       <div class="md:fr">
         <div class="f1 md:border-r border-gold-2 md:py-20px pr-22px pr">
           <h3 class="font-size-0.95rem">公司地址：</h3>
@@ -85,20 +85,21 @@
     </div>
   </div>
   <div class="border-t border-gold-2 bg-gold-3 py-20px">
-    <div class="maxw-1540px mx-auto px-20px lg:px-50px fs-3 c-white">Copyright 2010 郑州地铁集团有限公司 版权所有 All rights reserved.
+    <div class="maxw-1366px xl:maxw-1540px mx-auto px-20px lg:px-50px fs-3 c-white">Copyright 2010 郑州地铁集团有限公司 版权所有 All rights reserved.
       豫ICP备13021555号</div>
   </div>
 </footer>
 
-<div class="float-tool hidden md:fc pf bottom-40px right-20px z-10 ae">
-  <button class="pr ct mt-3 w-90px h-80px" style="background: url(../assets/imgs/elephant.png) center / contain no-repeat;">
+<!-- 浮动二维码/链接 -->
+<div class="float-tool hidden md:fc pf bottom-40px right-20px z-10 ae pointer-events-none">
+  <button class="pr ct mt-3 w-90px h-80px pointer-events-auto" style="background: url(../assets/imgs/elephant.png) center / contain no-repeat;">
     <div class="pa right-full pr-10px">
       <div class="p-20px bg-white rd-5px border border-gold-2">
         <a class="fs-7 font-bold text-gold nowrap">“晶”彩服务</a>
       </div>
     </div>
   </button>
-  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
     <div class="ic ic-phone24h1 fs-8 text-gold-3"></div>
     <div class="pa right-full pr-10px">
       <div class="p-20px bg-white rd-5px border border-gold-2">
@@ -106,7 +107,7 @@
       </div>
     </div>
   </button>
-  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 ">
+  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
     <div class="ic ic-weixin fs-8 text-gold-3"></div>
     <div class="pa right-full pr-10px">
       <div class="p-15px bg-white rd-5px border border-gold-2">
@@ -117,7 +118,7 @@
       </div>
     </div>
   </button>
-  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
     <div class="ic ic-weibo fs-8 text-gold-3"></div>
     <div class="pa right-full pr-10px">
       <div class="p-15px bg-white rd-5px border border-gold-2">
@@ -128,7 +129,20 @@
       </div>
     </div>
   </button>
-  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
+    <div class="fs-8 text-gold-3">
+      <img src="/assets/imgs/ic-yu.svg" alt="">
+    </div>
+    <div class="pa right-full pr-10px">
+      <div class="p-15px bg-white rd-5px border border-gold-2">
+        <div class="w-110px h-110px bg-gold-2">
+          <img class="w-full h-full" src="/assets/imgs/qr-weixin-1.jpg" alt="郑州地铁抖音官方账号二维码">
+        </div>
+        <p class="mt-10px mb-0 fs-3">郑州地铁xxx</p>
+      </div>
+    </div>
+  </button>
+  <button class="pr ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
     <div class="ic ic-douyin fs-8 text-gold-3"></div>
     <div class="pa right-full pr-10px">
       <div class="p-15px bg-white rd-5px border border-gold-2">
@@ -139,9 +153,16 @@
       </div>
     </div>
   </button>
-  <button class="scroll-to-top-btn ct mt-3 w-50px h-50px bg-white border a rd border-gold-2">
+  <button class="scroll-to-top-btn ct mt-3 w-50px h-50px bg-white border a rd border-gold-2 pointer-events-auto">
     <div class="ic ic-fanhuidingbu fs-8 text-gold-3"></div>
   </button>
+</div>
+
+<!-- 消息公告 -->
+<div class="msg-pop md:block pf size-150px z-10 left-1 top-50%" style="background: url(/assets/imgs/msg-pop.png) center / contain no-repeat;">
+  <a class="pa size-full" href=""></a>
+  <button class="pa w-16px h-16px bg-black bg-op-30 rd-10 right-0 ic ic-close ct c-white a"
+    onclick="closeMsgPop()"></button>
 </div>
 
 <script>
@@ -149,6 +170,14 @@
   document.querySelector('.scroll-to-top-btn').addEventListener('click', e => {
     window.scrollTo(0, 0);
   });
+
+  // 消息公告按钮
+  var msgPop = document.querySelector('.msg-pop');
+  msgPop.style.display = sessionStorage.getItem('msg-pop-visible') === 'false' ? 'none' : '';
+  function closeMsgPop(btn) {
+    msgPop.style.display = "none";
+    sessionStorage.setItem('msg-pop-visible', false);
+  }
 </script>
 
 <!-- 公共 Footer 结束 -->
